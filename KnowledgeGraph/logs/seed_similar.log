@@ -1,0 +1,42 @@
+2026-03-06 09:48:46,371  INFO     ============================================================
+2026-03-06 09:48:46,372  INFO     BindIQ — Seed Similar Customers + Graph Relationships
+2026-03-06 09:48:46,373  INFO     ============================================================
+2026-03-06 09:48:46,374  INFO     
+[1/6] Upserting similar customer nodes…
+2026-03-06 09:48:48,604  INFO       + Customer: Sarah's Specialty Breads [sarah_specialty_breads]
+2026-03-06 09:48:48,654  INFO       + Customer: Jake's Artisan Bakery [jakes_artisan_bakery]
+2026-03-06 09:48:48,664  INFO       + Customer: Artisan Bread Co [artisan_bread_co]
+2026-03-06 09:48:48,676  INFO       + Customer: Jake's Wholesale Bakery [jakes_wholesale_bakery_declined]
+2026-03-06 09:48:48,685  INFO       + Customer: Lopez Construction LLC [lopez_construction_llc]
+2026-03-06 09:48:48,697  INFO       + Customer: Apex Commercial Builders [apex_commercial_builders]
+2026-03-06 09:48:48,697  INFO     
+[2/6] Creating INSURED_BY relationships…
+2026-03-06 09:48:48,782  INFO       + INSURED_BY: sarah_specialty_breads → next (excellent)
+2026-03-06 09:48:48,785  INFO       + INSURED_BY: jakes_artisan_bakery → next (good)
+2026-03-06 09:48:48,788  INFO       + INSURED_BY: artisan_bread_co → chubb (good)
+2026-03-06 09:48:48,843  INFO       + INSURED_BY: jakes_wholesale_bakery_declined → travelers (declined)
+2026-03-06 09:48:48,846  INFO       + INSURED_BY: lopez_construction_llc → cna (excellent)
+2026-03-06 09:48:48,849  INFO       + INSURED_BY: apex_commercial_builders → cna (good)
+2026-03-06 09:48:48,850  INFO     
+[3/6] Creating SIMILAR_TO relationships…
+2026-03-06 09:48:48,959  INFO       + SIMILAR_TO: maria_bakery_tx ↔ sarah_specialty_breads (0.87)
+2026-03-06 09:48:48,963  INFO       + SIMILAR_TO: maria_bakery_tx ↔ jakes_artisan_bakery (0.81)
+2026-03-06 09:48:48,966  INFO       + SIMILAR_TO: maria_bakery_tx ↔ artisan_bread_co (0.79)
+2026-03-06 09:48:48,974  INFO       + SIMILAR_TO: maria_bakery_tx ↔ jakes_wholesale_bakery_declined (0.81)
+2026-03-06 09:48:48,981  INFO       + SIMILAR_TO: rodriguez_construction ↔ lopez_construction_llc (0.89)
+2026-03-06 09:48:48,984  INFO       + SIMILAR_TO: rodriguez_construction ↔ apex_commercial_builders (0.82)
+2026-03-06 09:48:48,985  INFO     
+[4/6] Creating Retailer nodes…
+2026-03-06 09:48:49,080  INFO       + Retailer: Whole Foods Market Inc.
+2026-03-06 09:48:49,081  INFO     
+[5/6] Creating SUPPLIES relationships…
+2026-03-06 09:48:49,161  INFO       + SUPPLIES: maria_bakery_tx → whole_foods
+2026-03-06 09:48:49,169  INFO       + SUPPLIES: sarah_specialty_breads → whole_foods
+2026-03-06 09:48:49,179  INFO     
+[6/6] Creating HANDLES_VENDOR_REQUIREMENTS relationships…
+2026-03-06 09:48:49,257  INFO       + HANDLES: next → whole_foods (47 times)
+2026-03-06 09:48:49,348  INFO       + HANDLES: hartford → whole_foods (12 times)
+2026-03-06 09:48:49,350  INFO     
+============================================================
+2026-03-06 09:48:49,351  INFO     Done: customers=6, insured_by=6, similar_to=6, retailers=1, supplies=2, handles=2
+2026-03-06 09:48:49,351  INFO     ============================================================

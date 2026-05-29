@@ -1,0 +1,65 @@
+{
+  "steps": {
+    "neo4j_loader": {
+      "status": "ok",
+      "summary": {
+        "carriers": 12,
+        "industries": 12,
+        "states": 6
+      }
+    },
+    "seed_customers": {
+      "status": "ok",
+      "loaded": 12,
+      "failed": 0
+    },
+    "cmdb_loader": {
+      "status": "skipped"
+    },
+    "embeddings": {
+      "status": "ok",
+      "carriers_embedded": 12,
+      "customers_embedded": 0,
+      "similarity_edges": 0
+    },
+    "scoring": {
+      "status": "ok",
+      "scored": 1
+    }
+  },
+  "status": "ok",
+  "scoring": [
+    {
+      "customer_id": "maria_bakery_tx",
+      "rankings": [
+        {
+          "carrier_id": "hiscox",
+          "carrier_name": "Hiscox",
+          "total_score": 52.4,
+          "semantic_score": 28.7,
+          "graph_score": 41.9,
+          "rules_score": 90.0,
+          "explanation": "Hiscox specializes in small business food service operations like artisan bakeries and can bind your $2M general liability and product liability coverage quickly enough to meet Whole Foods' 48-hour vendor requirement. While Hiscox's A.M. Best rating provides financial stability, their fast binding capability is critical for capturing this time-sensitive $500K contract opportunity."
+        },
+        {
+          "carrier_id": "next",
+          "carrier_name": "NEXT Insurance",
+          "total_score": 51.3,
+          "semantic_score": 28.0,
+          "graph_score": 39.7,
+          "rules_score": 90.0,
+          "explanation": "NEXT Insurance specializes in food service businesses and can bind your $2M general liability and product liability coverage within hours, which is critical for meeting Whole Foods' 48-hour vendor requirement. While NEXT may not have extensive experience with artisan bakeries specifically, their fast turnaround and A- financial rating make them a reliable choice to get you compliant quickly so you can fulfill this significant $500K contract opportunity."
+        },
+        {
+          "carrier_id": "markel",
+          "carrier_name": "Markel",
+          "total_score": 45.5,
+          "semantic_score": 24.5,
+          "graph_score": 42.9,
+          "rules_score": 70.0,
+          "explanation": "While Markel maintains an A.M. Best rating and meets your $2M general and product liability coverage requirements for the Whole Foods contract, their slow binding speed creates significant risk since you need approval within 48 hours. I recommend we immediately explore faster-binding carriers that specialize in food service and bakery operations, as Markel's extended underwriting timeline could jeopardize your vendor agreement deadline."
+        }
+      ]
+    }
+  ]
+}

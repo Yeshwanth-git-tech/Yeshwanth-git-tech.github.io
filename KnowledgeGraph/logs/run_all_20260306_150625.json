@@ -1,0 +1,65 @@
+{
+  "steps": {
+    "neo4j_loader": {
+      "status": "ok",
+      "summary": {
+        "carriers": 12,
+        "industries": 12,
+        "states": 6
+      }
+    },
+    "seed_customers": {
+      "status": "ok",
+      "loaded": 12,
+      "failed": 0
+    },
+    "cmdb_loader": {
+      "status": "skipped"
+    },
+    "embeddings": {
+      "status": "ok",
+      "carriers_embedded": 12,
+      "customers_embedded": 6,
+      "similarity_edges": 0
+    },
+    "scoring": {
+      "status": "ok",
+      "scored": 1
+    }
+  },
+  "status": "ok",
+  "scoring": [
+    {
+      "customer_id": "maria_bakery_tx",
+      "rankings": [
+        {
+          "carrier_id": "next",
+          "carrier_name": "NEXT Insurance",
+          "total_score": 80.4,
+          "semantic_score": 95.0,
+          "graph_score": 77.2,
+          "rules_score": 70.0,
+          "explanation": "NEXT Insurance specializes in food service businesses like yours and can bind your $2M general liability and product liability coverage within hours\u2014critical for meeting Whole Foods' 48-hour vendor requirement. Their A- AM Best rating ensures strong financial stability to back your coverage as you scale this significant new contract."
+        },
+        {
+          "carrier_id": "nationwide",
+          "carrier_name": "Nationwide",
+          "total_score": 75.2,
+          "semantic_score": 95.0,
+          "graph_score": 64.2,
+          "rules_score": 70.0,
+          "explanation": "Nationwide has deep expertise in food service and bakery operations, making them well-suited to underwrite the specific product liability risks associated with your custom artisan breads and pastries supplied to Whole Foods and restaurants. Their A+ financial rating and ability to bind coverage quickly align perfectly with your 48-hour deadline to meet the vendor requirement for your $500K supply contract."
+        },
+        {
+          "carrier_id": "simply_business",
+          "carrier_name": "Simply Business",
+          "total_score": 65.1,
+          "semantic_score": 95.0,
+          "graph_score": 61.5,
+          "rules_score": 40.0,
+          "explanation": "Simply Business specializes in food service businesses like your bakery and can provide the $2M general liability and product liability coverage that Whole Foods requires. Given your 48-hour deadline to satisfy the vendor requirement, Simply Business's fast binding capabilities make them well-positioned to get your policy in place quickly while you scale production for this significant contract."
+        }
+      ]
+    }
+  ]
+}

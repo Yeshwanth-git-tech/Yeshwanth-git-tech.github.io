@@ -1,0 +1,32 @@
+{
+  "steps": {
+    "neo4j_loader": {
+      "status": "error",
+      "reason": "'state_code'"
+    },
+    "seed_customers": {
+      "status": "ok",
+      "loaded": 12,
+      "failed": 0
+    },
+    "cmdb_loader": {
+      "status": "error",
+      "reason": "ServiceNow unreachable"
+    },
+    "embeddings": {
+      "status": "error",
+      "reason": "No module named 'sentence_transformers'"
+    },
+    "scoring": {
+      "status": "ok",
+      "scored": 1
+    }
+  },
+  "status": "partial",
+  "scoring": [
+    {
+      "customer_id": "maria_bakery_tx",
+      "rankings": []
+    }
+  ]
+}

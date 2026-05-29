@@ -1,0 +1,701 @@
+2026-03-06 02:37:25,497  INFO     ============================================================
+2026-03-06 02:37:25,497  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 02:37:25,497  INFO     Started: 2026-03-06 07:37:25 UTC
+2026-03-06 02:37:25,497  INFO     ============================================================
+2026-03-06 02:37:25,498  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:37:25,498  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 02:37:25,498  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:37:25,985  INFO     ============================================================
+2026-03-06 02:37:25,986  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 02:37:25,986  INFO     ============================================================
+2026-03-06 02:37:25,987  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 02:37:25,991  INFO     Agent 1 data: 0 carriers | 0 pricing rows | 0 reliability | 0 appetite | 0 state rows
+2026-03-06 02:37:28,049  ERROR      Step 1 FAILED: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:28,050  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:37:28,051  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 02:37:28,051  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:37:28,060  INFO     ============================================================
+2026-03-06 02:37:28,060  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 02:37:28,061  INFO     Seeding 12 customers into Neo4j
+2026-03-06 02:37:28,061  INFO     ============================================================
+2026-03-06 02:37:30,087  WARNING    ! Failed: maria_bakery_tx: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:32,130  WARNING    ! Failed: atlas_construction_oh: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:34,162  WARNING    ! Failed: precision_machining_in: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:36,211  WARNING    ! Failed: cloudpeak_tech_ca: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:38,241  WARNING    ! Failed: sunstone_medical_fl: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:40,282  WARNING    ! Failed: fastlane_logistics_tx: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:42,332  WARNING    ! Failed: pinnacle_realty_ny: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:44,368  WARNING    ! Failed: vertex_consulting_ca: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:46,409  WARNING    ! Failed: coastal_retail_fl: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:48,460  WARNING    ! Failed: sparkle_clean_ca: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:50,514  WARNING    ! Failed: greenthumb_landscape_tx: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:52,594  WARNING    ! Failed: frontier_foods_oh: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:37:52,595  INFO     
+  Seeded: 0 customers, 12 failed
+2026-03-06 02:37:52,595  INFO       Step 2 OK: 0 customers seeded
+2026-03-06 02:37:52,596  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:37:52,596  INFO       Step 3: ServiceNow CMDB — SKIPPED (--skip-cmdb)
+2026-03-06 02:37:52,596  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:37:52,596  INFO       Step 4: Embeddings — SKIPPED (--skip-embed)
+2026-03-06 02:37:52,597  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:37:52,597  INFO       Step 5: Hybrid scoring demo
+2026-03-06 02:37:52,597  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:37:52,605  ERROR      Step 5 FAILED: No module named 'numpy'
+2026-03-06 02:37:52,605  INFO     
+============================================================
+2026-03-06 02:37:52,606  INFO       Pipeline complete in 27.1s
+2026-03-06 02:37:52,606  INFO       Overall status: partial
+2026-03-06 02:37:52,608  INFO         neo4j_loader         → error
+2026-03-06 02:37:52,609  INFO         seed_customers       → ok
+2026-03-06 02:37:52,609  INFO         cmdb_loader          → skipped
+2026-03-06 02:37:52,610  INFO         embeddings           → skipped
+2026-03-06 02:37:52,610  INFO         scoring              → error
+2026-03-06 02:37:52,611  INFO     ============================================================
+2026-03-06 02:37:52,620  INFO       Results saved → C:\Users\theya\Documents\GitHub\Plutus\KnowledgeGraph\logs\run_all_20260306_073752.json
+2026-03-06 02:45:45,008  INFO     ============================================================
+2026-03-06 02:45:45,009  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 02:45:45,009  INFO     Started: 2026-03-06 07:45:45 UTC
+2026-03-06 02:45:45,009  INFO     ============================================================
+2026-03-06 02:45:45,009  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:45:45,009  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 02:45:45,009  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:45:46,391  INFO     ============================================================
+2026-03-06 02:45:46,391  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 02:45:46,391  INFO     ============================================================
+2026-03-06 02:45:46,392  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 02:45:46,413  INFO     Agent 1 data: 12 carriers | 210 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 02:45:48,480  ERROR      Step 1 FAILED: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:45:48,482  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:45:48,482  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 02:45:48,483  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:45:48,484  INFO     ============================================================
+2026-03-06 02:45:48,484  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 02:45:48,485  INFO     Seeding 12 customers into Neo4j
+2026-03-06 02:45:48,485  INFO     ============================================================
+2026-03-06 02:45:50,543  WARNING    ! Failed: maria_bakery_tx: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:45:52,575  WARNING    ! Failed: atlas_construction_oh: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:45:55,776  WARNING    ! Failed: precision_machining_in: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:45:57,834  WARNING    ! Failed: cloudpeak_tech_ca: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:45:59,882  WARNING    ! Failed: sunstone_medical_fl: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:01,946  WARNING    ! Failed: fastlane_logistics_tx: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:03,976  WARNING    ! Failed: pinnacle_realty_ny: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:06,089  WARNING    ! Failed: vertex_consulting_ca: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:08,138  WARNING    ! Failed: coastal_retail_fl: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:10,180  WARNING    ! Failed: sparkle_clean_ca: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:12,227  WARNING    ! Failed: greenthumb_landscape_tx: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:14,267  WARNING    ! Failed: frontier_foods_oh: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}
+2026-03-06 02:46:14,268  INFO     
+  Seeded: 0 customers, 12 failed
+2026-03-06 02:46:14,268  INFO       Step 2 OK: 0 customers seeded
+2026-03-06 02:46:14,269  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:46:14,269  INFO       Step 3: ServiceNow CMDB — SKIPPED (--skip-cmdb)
+2026-03-06 02:46:14,269  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:46:14,269  INFO       Step 4: Generate + store embeddings
+2026-03-06 02:46:14,269  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:46:14,289  WARNING    Step 4 WARNING (non-fatal): No module named 'numpy'
+2026-03-06 02:46:14,292  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:46:14,293  INFO       Step 5: Hybrid scoring demo
+2026-03-06 02:46:14,293  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:46:14,297  ERROR      Step 5 FAILED: No module named 'numpy'
+2026-03-06 02:46:14,298  INFO     
+============================================================
+2026-03-06 02:46:14,301  INFO       Pipeline complete in 29.3s
+2026-03-06 02:46:14,302  INFO       Overall status: partial
+2026-03-06 02:46:14,302  INFO         neo4j_loader         → error
+2026-03-06 02:46:14,302  INFO         seed_customers       → ok
+2026-03-06 02:46:14,303  INFO         cmdb_loader          → skipped
+2026-03-06 02:46:14,304  INFO         embeddings           → error
+2026-03-06 02:46:14,304  INFO         scoring              → error
+2026-03-06 02:46:14,304  INFO     ============================================================
+2026-03-06 02:46:14,306  INFO       Results saved → C:\Users\theya\Documents\GitHub\Plutus\KnowledgeGraph\logs\run_all_20260306_074614.json
+2026-03-06 02:49:31,744  INFO     ============================================================
+2026-03-06 02:49:31,744  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 02:49:31,744  INFO     Started: 2026-03-06 07:49:31 UTC
+2026-03-06 02:49:31,744  INFO     ============================================================
+2026-03-06 02:49:31,744  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:49:31,745  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 02:49:31,745  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:49:32,088  INFO     ============================================================
+2026-03-06 02:49:32,089  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 02:49:32,089  INFO     ============================================================
+2026-03-06 02:49:32,089  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 02:49:32,092  INFO     Agent 1 data: 12 carriers | 210 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 02:49:34,141  INFO     Neo4j connected: bolt://localhost:7687 / db=neo4j
+2026-03-06 02:49:34,208  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (c:Carrier) REQUIRE c.id IS UNIQUE'
+2026-03-06 02:49:34,216  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (i:Industry) REQUIRE i.id IS UNIQUE'
+2026-03-06 02:49:34,221  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE` has no effect. `CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (s:State) REQUIRE s.code IS UNIQUE'
+2026-03-06 02:49:34,230  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (cu:Customer) REQUIRE cu.id IS UNIQUE'
+2026-03-06 02:49:34,255  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)` has no effect. `RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)', 'indexConstrPat': 'RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX carrier_name IF NOT EXISTS FOR (c:Carrier) ON (c.name)'
+2026-03-06 02:49:34,266  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)` has no effect. `RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)', 'indexConstrPat': 'RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX customer_industry IF NOT EXISTS FOR (cu:Customer) ON (cu.industry_id)'
+2026-03-06 02:49:34,267  INFO     Schema / indexes ready
+2026-03-06 02:49:34,267  INFO     Loading nodes...
+2026-03-06 02:49:35,230  INFO       Carriers: 12 upserted
+2026-03-06 02:49:35,378  INFO       Industries: 12 upserted
+2026-03-06 02:49:35,381  ERROR      Step 1 FAILED: 'state_code'
+2026-03-06 02:49:35,381  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:49:35,381  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 02:49:35,381  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:49:35,382  INFO     ============================================================
+2026-03-06 02:49:35,382  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 02:49:35,382  INFO     Seeding 12 customers into Neo4j
+2026-03-06 02:49:35,383  INFO     ============================================================
+2026-03-06 02:49:38,112  INFO       + Maria's Artisan Bakery [maria_bakery_tx]
+2026-03-06 02:49:38,163  INFO       + Atlas Commercial Contractors [atlas_construction_oh]
+2026-03-06 02:49:38,195  INFO       + Precision Machining Solutions [precision_machining_in]
+2026-03-06 02:49:38,449  INFO       + CloudPeak Technology [cloudpeak_tech_ca]
+2026-03-06 02:49:38,466  INFO       + Sunstone Medical Group [sunstone_medical_fl]
+2026-03-06 02:49:38,486  INFO       + FastLane Logistics [fastlane_logistics_tx]
+2026-03-06 02:49:38,513  INFO       + Pinnacle Property Management [pinnacle_realty_ny]
+2026-03-06 02:49:38,555  INFO       + Vertex Strategy Consulting [vertex_consulting_ca]
+2026-03-06 02:49:38,586  INFO       + Coastal Home & Garden [coastal_retail_fl]
+2026-03-06 02:49:38,619  INFO       + Sparkle Commercial Cleaning [sparkle_clean_ca]
+2026-03-06 02:49:38,658  INFO       + GreenThumb Landscape Services [greenthumb_landscape_tx]
+2026-03-06 02:49:38,684  INFO       + Frontier Foods Manufacturing [frontier_foods_oh]
+2026-03-06 02:49:38,685  INFO     
+  Seeded: 12 customers, 0 failed
+2026-03-06 02:49:38,685  INFO       Step 2 OK: 12 customers seeded
+2026-03-06 02:49:38,685  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:49:38,686  INFO       Step 3: ServiceNow CMDB sync
+2026-03-06 02:49:38,686  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:49:39,000  INFO     ============================================================
+2026-03-06 02:49:39,000  INFO     BindIQ Agent 2 — ServiceNow CMDB Loader
+2026-03-06 02:49:39,001  INFO     ============================================================
+2026-03-06 02:49:49,052  ERROR    ServiceNow connection failed: HTTPSConnectionPool(host='dev252187.service-now.com', port=443): Max retries exceeded with url: /api/now/table/sys_user?sysparm_limit=1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='dev252187.service-now.com', port=443) at 0x1f2aac6aa50>, 'Connection to dev252187.service-now.com timed out. (connect timeout=10)'))
+2026-03-06 02:49:49,053  INFO       Step 3 OK: error
+2026-03-06 02:49:49,053  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:49:49,053  INFO       Step 4: Generate + store embeddings
+2026-03-06 02:49:49,053  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:49:49,054  WARNING    Step 4 WARNING (non-fatal): No module named 'numpy'
+2026-03-06 02:49:49,055  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:49:49,055  INFO       Step 5: Hybrid scoring demo
+2026-03-06 02:49:49,055  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:49:49,056  ERROR      Step 5 FAILED: No module named 'numpy'
+2026-03-06 02:49:49,056  INFO     
+============================================================
+2026-03-06 02:49:49,056  INFO       Pipeline complete in 17.3s
+2026-03-06 02:49:49,056  INFO       Overall status: partial
+2026-03-06 02:49:49,056  INFO         neo4j_loader         → error
+2026-03-06 02:49:49,056  INFO         seed_customers       → ok
+2026-03-06 02:49:49,056  INFO         cmdb_loader          → error
+2026-03-06 02:49:49,056  INFO         embeddings           → error
+2026-03-06 02:49:49,056  INFO         scoring              → error
+2026-03-06 02:49:49,056  INFO     ============================================================
+2026-03-06 02:49:49,057  INFO       Results saved → C:\Users\theya\Documents\GitHub\Plutus\KnowledgeGraph\logs\run_all_20260306_074949.json
+2026-03-06 02:50:42,971  INFO     ============================================================
+2026-03-06 02:50:42,971  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 02:50:42,971  INFO     Started: 2026-03-06 07:50:42 UTC
+2026-03-06 02:50:42,971  INFO     ============================================================
+2026-03-06 02:50:42,971  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:50:42,971  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 02:50:42,971  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:50:44,387  INFO     ============================================================
+2026-03-06 02:50:44,388  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 02:50:44,388  INFO     ============================================================
+2026-03-06 02:50:44,388  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 02:50:44,390  INFO     Agent 1 data: 12 carriers | 210 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 02:50:46,465  INFO     Neo4j connected: bolt://localhost:7687 / db=neo4j
+2026-03-06 02:50:46,471  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (c:Carrier) REQUIRE c.id IS UNIQUE'
+2026-03-06 02:50:46,477  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (i:Industry) REQUIRE i.id IS UNIQUE'
+2026-03-06 02:50:46,481  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE` has no effect. `CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (s:State) REQUIRE s.code IS UNIQUE'
+2026-03-06 02:50:46,486  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (cu:Customer) REQUIRE cu.id IS UNIQUE'
+2026-03-06 02:50:46,490  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)` has no effect. `RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)', 'indexConstrPat': 'RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX carrier_name IF NOT EXISTS FOR (c:Carrier) ON (c.name)'
+2026-03-06 02:50:46,494  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)` has no effect. `RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)', 'indexConstrPat': 'RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX customer_industry IF NOT EXISTS FOR (cu:Customer) ON (cu.industry_id)'
+2026-03-06 02:50:46,494  INFO     Schema / indexes ready
+2026-03-06 02:50:46,494  INFO     Loading nodes...
+2026-03-06 02:50:46,730  INFO       Carriers: 12 upserted
+2026-03-06 02:50:46,823  INFO       Industries: 12 upserted
+2026-03-06 02:50:46,894  INFO       States: 6 upserted
+2026-03-06 02:50:46,894  INFO     Loading relationships...
+2026-03-06 02:50:49,041  INFO       SPECIALIZES_IN: 144 relationships
+2026-03-06 02:50:49,043  ERROR      Step 1 FAILED: 'state_code'
+2026-03-06 02:50:49,044  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:50:49,044  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 02:50:49,044  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:50:49,046  INFO     ============================================================
+2026-03-06 02:50:49,047  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 02:50:49,047  INFO     Seeding 12 customers into Neo4j
+2026-03-06 02:50:49,047  INFO     ============================================================
+2026-03-06 02:50:51,380  INFO       + Maria's Artisan Bakery [maria_bakery_tx]
+2026-03-06 02:50:51,393  INFO       + Atlas Commercial Contractors [atlas_construction_oh]
+2026-03-06 02:50:51,404  INFO       + Precision Machining Solutions [precision_machining_in]
+2026-03-06 02:50:51,491  INFO       + CloudPeak Technology [cloudpeak_tech_ca]
+2026-03-06 02:50:51,502  INFO       + Sunstone Medical Group [sunstone_medical_fl]
+2026-03-06 02:50:51,517  INFO       + FastLane Logistics [fastlane_logistics_tx]
+2026-03-06 02:50:51,537  INFO       + Pinnacle Property Management [pinnacle_realty_ny]
+2026-03-06 02:50:51,558  INFO       + Vertex Strategy Consulting [vertex_consulting_ca]
+2026-03-06 02:50:51,574  INFO       + Coastal Home & Garden [coastal_retail_fl]
+2026-03-06 02:50:51,589  INFO       + Sparkle Commercial Cleaning [sparkle_clean_ca]
+2026-03-06 02:50:51,599  INFO       + GreenThumb Landscape Services [greenthumb_landscape_tx]
+2026-03-06 02:50:51,607  INFO       + Frontier Foods Manufacturing [frontier_foods_oh]
+2026-03-06 02:50:51,608  INFO     
+  Seeded: 12 customers, 0 failed
+2026-03-06 02:50:51,608  INFO       Step 2 OK: 12 customers seeded
+2026-03-06 02:50:51,608  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:50:51,608  INFO       Step 3: ServiceNow CMDB sync
+2026-03-06 02:50:51,608  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:50:51,703  INFO     ============================================================
+2026-03-06 02:50:51,703  INFO     BindIQ Agent 2 — ServiceNow CMDB Loader
+2026-03-06 02:50:51,703  INFO     ============================================================
+2026-03-06 02:51:01,742  ERROR    ServiceNow connection failed: HTTPSConnectionPool(host='dev252187.service-now.com', port=443): Max retries exceeded with url: /api/now/table/sys_user?sysparm_limit=1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='dev252187.service-now.com', port=443) at 0x286a67d1160>, 'Connection to dev252187.service-now.com timed out. (connect timeout=10)'))
+2026-03-06 02:51:01,743  INFO       Step 3 OK: error
+2026-03-06 02:51:01,743  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:51:01,743  INFO       Step 4: Generate + store embeddings
+2026-03-06 02:51:01,743  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:51:01,745  INFO     ============================================================
+2026-03-06 02:51:01,746  INFO     BindIQ Agent 2 — Embeddings
+2026-03-06 02:51:01,746  INFO     ============================================================
+2026-03-06 02:51:01,747  INFO     Building carrier appetite embeddings...
+2026-03-06 02:51:04,079  WARNING    Step 4 WARNING (non-fatal): No module named 'sentence_transformers'
+2026-03-06 02:51:04,080  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:51:04,080  INFO       Step 5: Hybrid scoring demo
+2026-03-06 02:51:04,080  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:51:06,433  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 02:51:06,676  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `description_embedding` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=18, offset=57>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'description_embedding'}, '_severity': 'WARNING', '_position': {'offset': 57, 'line': 3, 'column': 18}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (cu:Customer {id: $cid})\n        WHERE cu.description_embedding IS NOT NULL\n        MATCH (c:Carrier)\n        WHERE c.appetite_embedding IS NOT NULL\n        RETURN c.id AS cid,\n               cu.description_embedding AS cust_vec,\n               c.appetite_embedding AS carr_vec\n        '
+2026-03-06 02:51:06,678  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `appetite_embedding` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=5, column=17, offset=133>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'appetite_embedding'}, '_severity': 'WARNING', '_position': {'offset': 133, 'line': 5, 'column': 17}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (cu:Customer {id: $cid})\n        WHERE cu.description_embedding IS NOT NULL\n        MATCH (c:Carrier)\n        WHERE c.appetite_embedding IS NOT NULL\n        RETURN c.id AS cid,\n               cu.description_embedding AS cust_vec,\n               c.appetite_embedding AS carr_vec\n        '
+2026-03-06 02:51:06,678  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `description_embedding` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=7, column=19, offset=210>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'description_embedding'}, '_severity': 'WARNING', '_position': {'offset': 210, 'line': 7, 'column': 19}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (cu:Customer {id: $cid})\n        WHERE cu.description_embedding IS NOT NULL\n        MATCH (c:Carrier)\n        WHERE c.appetite_embedding IS NOT NULL\n        RETURN c.id AS cid,\n               cu.description_embedding AS cust_vec,\n               c.appetite_embedding AS carr_vec\n        '
+2026-03-06 02:51:06,679  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `appetite_embedding` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=8, column=18, offset=262>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'appetite_embedding'}, '_severity': 'WARNING', '_position': {'offset': 262, 'line': 8, 'column': 18}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (cu:Customer {id: $cid})\n        WHERE cu.description_embedding IS NOT NULL\n        MATCH (c:Carrier)\n        WHERE c.appetite_embedding IS NOT NULL\n        RETURN c.id AS cid,\n               cu.description_embedding AS cust_vec,\n               c.appetite_embedding AS carr_vec\n        '
+2026-03-06 02:51:07,036  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `SIMILAR_TO` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=42, offset=42>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'SIMILAR_TO'}, '_severity': 'WARNING', '_position': {'offset': 42, 'line': 2, 'column': 42}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 02:51:07,037  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `INSURED_BY` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=27, offset=96>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'INSURED_BY'}, '_severity': 'WARNING', '_position': {'offset': 96, 'line': 3, 'column': 27}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 02:51:07,038  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `outcome` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=19, offset=139>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'outcome'}, '_severity': 'WARNING', '_position': {'offset': 139, 'line': 4, 'column': 19}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 02:51:07,090  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `complaint_ratio_nat` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=31, offset=57>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'complaint_ratio_nat'}, '_severity': 'WARNING', '_position': {'offset': 57, 'line': 3, 'column': 31}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (c:Carrier)\n        RETURN c.id AS cid, c.complaint_ratio_nat AS cr\n        '
+2026-03-06 02:51:07,274  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `LICENSED_IN` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=33, offset=98>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'LICENSED_IN'}, '_severity': 'WARNING', '_position': {'offset': 98, 'line': 4, 'column': 33}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (cu:Customer {id: $cid})\n        MATCH (c:Carrier)\n        OPTIONAL MATCH (c)-[lic:LICENSED_IN]->(s:State {code: cu.state})\n        RETURN c.id AS cid,\n               cu.state AS cust_state,\n               lic IS NOT NULL AS licensed,\n               c.am_best AS am_best,\n               c.binding_speed_tier AS speed,\n               c.insurify_rating AS ins_rating\n        '
+2026-03-06 02:51:07,274  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `binding_speed_tier` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=9, column=18, offset=304>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'binding_speed_tier'}, '_severity': 'WARNING', '_position': {'offset': 304, 'line': 9, 'column': 18}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (cu:Customer {id: $cid})\n        MATCH (c:Carrier)\n        OPTIONAL MATCH (c)-[lic:LICENSED_IN]->(s:State {code: cu.state})\n        RETURN c.id AS cid,\n               cu.state AS cust_state,\n               lic IS NOT NULL AS licensed,\n               c.am_best AS am_best,\n               c.binding_speed_tier AS speed,\n               c.insurify_rating AS ins_rating\n        '
+2026-03-06 02:51:07,275  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `insurify_rating` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=10, column=18, offset=350>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'insurify_rating'}, '_severity': 'WARNING', '_position': {'offset': 350, 'line': 10, 'column': 18}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: '\n        MATCH (cu:Customer {id: $cid})\n        MATCH (c:Carrier)\n        OPTIONAL MATCH (c)-[lic:LICENSED_IN]->(s:State {code: cu.state})\n        RETURN c.id AS cid,\n               cu.state AS cust_state,\n               lic IS NOT NULL AS licensed,\n               c.am_best AS am_best,\n               c.binding_speed_tier AS speed,\n               c.insurify_rating AS ins_rating\n        '
+2026-03-06 02:51:07,317  INFO     
+  Rankings for [maria_bakery_tx]:
+2026-03-06 02:51:07,319  INFO     
+============================================================
+2026-03-06 02:51:07,321  INFO       Pipeline complete in 24.3s
+2026-03-06 02:51:07,322  INFO       Overall status: partial
+2026-03-06 02:51:07,322  INFO         neo4j_loader         → error
+2026-03-06 02:51:07,322  INFO         seed_customers       → ok
+2026-03-06 02:51:07,322  INFO         cmdb_loader          → error
+2026-03-06 02:51:07,322  INFO         embeddings           → error
+2026-03-06 02:51:07,322  INFO         scoring              → ok
+2026-03-06 02:51:07,322  INFO     ============================================================
+2026-03-06 02:51:07,323  INFO       Results saved → C:\Users\theya\Documents\GitHub\Plutus\KnowledgeGraph\logs\run_all_20260306_075107.json
+2026-03-06 02:52:03,834  INFO     ============================================================
+2026-03-06 02:52:03,834  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 02:52:03,834  INFO     Started: 2026-03-06 07:52:03 UTC
+2026-03-06 02:52:03,834  INFO     ============================================================
+2026-03-06 02:52:03,834  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:52:03,834  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 02:52:03,834  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:52:04,273  INFO     ============================================================
+2026-03-06 02:52:04,273  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 02:52:04,273  INFO     ============================================================
+2026-03-06 02:52:04,274  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 02:52:04,276  INFO     Agent 1 data: 12 carriers | 210 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 02:52:06,225  INFO     ============================================================
+2026-03-06 02:52:06,231  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 02:52:06,231  INFO     Started: 2026-03-06 07:52:06 UTC
+2026-03-06 02:52:06,231  INFO     ============================================================
+2026-03-06 02:52:06,231  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:52:06,231  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 02:52:06,231  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:52:06,645  INFO     ============================================================
+2026-03-06 02:52:06,645  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 02:52:06,645  INFO     ============================================================
+2026-03-06 02:52:06,646  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 02:52:06,648  INFO     Agent 1 data: 12 carriers | 210 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 02:52:08,684  INFO     Neo4j connected: bolt://localhost:7687 / db=neo4j
+2026-03-06 02:52:08,692  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (c:Carrier) REQUIRE c.id IS UNIQUE'
+2026-03-06 02:52:08,709  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (i:Industry) REQUIRE i.id IS UNIQUE'
+2026-03-06 02:52:08,720  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE` has no effect. `CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (s:State) REQUIRE s.code IS UNIQUE'
+2026-03-06 02:52:08,727  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (cu:Customer) REQUIRE cu.id IS UNIQUE'
+2026-03-06 02:52:08,731  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)` has no effect. `RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)', 'indexConstrPat': 'RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX carrier_name IF NOT EXISTS FOR (c:Carrier) ON (c.name)'
+2026-03-06 02:52:08,737  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)` has no effect. `RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)', 'indexConstrPat': 'RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX customer_industry IF NOT EXISTS FOR (cu:Customer) ON (cu.industry_id)'
+2026-03-06 02:52:08,738  INFO     Schema / indexes ready
+2026-03-06 02:52:08,738  INFO     Loading nodes...
+2026-03-06 02:52:08,828  INFO       Carriers: 12 upserted
+2026-03-06 02:52:08,896  INFO       Industries: 12 upserted
+2026-03-06 02:52:08,937  INFO       States: 6 upserted
+2026-03-06 02:52:08,937  INFO     Loading relationships...
+2026-03-06 02:52:10,502  INFO       SPECIALIZES_IN: 144 relationships
+2026-03-06 02:52:11,041  INFO       LICENSED_IN: 71 relationships
+2026-03-06 02:52:11,161  INFO       Pricing: updated 12 carriers
+2026-03-06 02:52:11,260  ERROR      Step 1 FAILED: float() argument must be a string or a real number, not 'NoneType'
+2026-03-06 02:52:11,261  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 02:52:11,261  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 02:52:11,261  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 02:52:11,262  INFO     ============================================================
+2026-03-06 02:52:11,263  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 02:52:11,263  INFO     Seeding 12 customers into Neo4j
+2026-03-06 02:52:11,263  INFO     ============================================================
+2026-03-06 03:12:10,385  INFO     ============================================================
+2026-03-06 03:12:10,385  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 03:12:10,386  INFO     Started: 2026-03-06 08:12:10 UTC
+2026-03-06 03:12:10,386  INFO     ============================================================
+2026-03-06 03:12:10,386  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 03:12:10,386  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 03:12:10,386  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 03:12:10,832  INFO     ============================================================
+2026-03-06 03:12:10,832  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 03:12:10,832  INFO     ============================================================
+2026-03-06 03:12:10,832  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 03:12:10,834  INFO     Agent 1 data: 12 carriers | 210 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 03:12:12,877  INFO     Neo4j connected: bolt://localhost:7687 / db=neo4j
+2026-03-06 03:12:12,881  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (c:Carrier) REQUIRE c.id IS UNIQUE'
+2026-03-06 03:12:12,884  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (i:Industry) REQUIRE i.id IS UNIQUE'
+2026-03-06 03:12:12,886  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE` has no effect. `CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (s:State) REQUIRE s.code IS UNIQUE'
+2026-03-06 03:12:12,888  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (cu:Customer) REQUIRE cu.id IS UNIQUE'
+2026-03-06 03:12:12,890  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)` has no effect. `RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)', 'indexConstrPat': 'RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX carrier_name IF NOT EXISTS FOR (c:Carrier) ON (c.name)'
+2026-03-06 03:12:12,966  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)` has no effect. `RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)', 'indexConstrPat': 'RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX customer_industry IF NOT EXISTS FOR (cu:Customer) ON (cu.industry_id)'
+2026-03-06 03:12:12,966  INFO     Schema / indexes ready
+2026-03-06 03:12:12,967  INFO     Loading nodes...
+2026-03-06 03:12:13,732  INFO       Carriers: 12 upserted
+2026-03-06 03:12:14,012  INFO       Industries: 12 upserted
+2026-03-06 03:12:14,098  INFO       States: 6 upserted
+2026-03-06 03:12:14,098  INFO     Loading relationships...
+2026-03-06 03:12:15,082  INFO       SPECIALIZES_IN: 144 relationships
+2026-03-06 03:12:15,464  INFO       LICENSED_IN: 71 relationships
+2026-03-06 03:12:15,501  INFO       Pricing: updated 12 carriers
+2026-03-06 03:12:15,527  INFO       Reliability: updated 12 carriers
+2026-03-06 03:12:15,529  INFO     
+  Neo4j graph: 12 carriers | 12 industries | 6 states
+2026-03-06 03:12:15,529  INFO       Neo4j load complete
+2026-03-06 03:12:15,530  INFO       Step 1 OK: {'carriers': 12, 'industries': 12, 'states': 6}
+2026-03-06 03:12:15,530  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 03:12:15,530  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 03:12:15,530  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 03:12:15,531  INFO     ============================================================
+2026-03-06 03:12:15,531  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 03:12:15,531  INFO     Seeding 12 customers into Neo4j
+2026-03-06 03:12:15,531  INFO     ============================================================
+2026-03-06 03:12:17,714  INFO       + Maria's Artisan Bakery [maria_bakery_tx]
+2026-03-06 03:12:18,115  INFO       + Atlas Commercial Contractors [atlas_construction_oh]
+2026-03-06 03:12:18,129  INFO       + Precision Machining Solutions [precision_machining_in]
+2026-03-06 03:12:18,142  INFO       + CloudPeak Technology [cloudpeak_tech_ca]
+2026-03-06 03:12:18,148  INFO       + Sunstone Medical Group [sunstone_medical_fl]
+2026-03-06 03:12:18,156  INFO       + FastLane Logistics [fastlane_logistics_tx]
+2026-03-06 03:12:18,161  INFO       + Pinnacle Property Management [pinnacle_realty_ny]
+2026-03-06 03:12:18,166  INFO       + Vertex Strategy Consulting [vertex_consulting_ca]
+2026-03-06 03:12:18,170  INFO       + Coastal Home & Garden [coastal_retail_fl]
+2026-03-06 03:12:18,173  INFO       + Sparkle Commercial Cleaning [sparkle_clean_ca]
+2026-03-06 03:12:18,177  INFO       + GreenThumb Landscape Services [greenthumb_landscape_tx]
+2026-03-06 03:12:18,181  INFO       + Frontier Foods Manufacturing [frontier_foods_oh]
+2026-03-06 03:12:18,181  INFO     
+  Seeded: 12 customers, 0 failed
+2026-03-06 03:12:18,181  INFO       Step 2 OK: 12 customers seeded
+2026-03-06 03:12:18,181  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 03:12:18,181  INFO       Step 3: ServiceNow CMDB — SKIPPED (--skip-cmdb)
+2026-03-06 03:12:18,181  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 03:12:18,181  INFO       Step 4: Generate + store embeddings
+2026-03-06 03:12:18,181  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 03:12:18,182  INFO     ============================================================
+2026-03-06 03:12:18,182  INFO     BindIQ Agent 2 — Embeddings
+2026-03-06 03:12:18,182  INFO     ============================================================
+2026-03-06 03:12:18,183  INFO     Building carrier appetite embeddings...
+2026-03-06 03:12:25,391  INFO     Loading embedding model: all-MiniLM-L6-v2
+2026-03-06 03:12:25,392  INFO     Use pytorch device_name: cpu
+2026-03-06 03:12:25,392  INFO     Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-06 03:12:25,797  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:25,823  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:25,885  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:25,913  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:25,979  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:26,019  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:26,083  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:26,115  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-06 03:12:26,403  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:26,435  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:26,510  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:26,544  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:26,611  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-06 03:12:26,682  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:26,719  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:27,170  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:27,203  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:27,263  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:27,298  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:27,383  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-06 03:12:27,453  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-06 03:12:27,690  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:12:27,716  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-06 03:12:27,786  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-03-06 03:12:27,797  INFO       Model ready
+2026-03-06 03:12:29,118  INFO       Carrier embeddings stored: 12
+2026-03-06 03:12:29,118  INFO     Building customer description embeddings...
+2026-03-06 03:12:29,120  INFO       No new customer embeddings needed
+2026-03-06 03:12:29,120  INFO       Customer embeddings stored: 0
+2026-03-06 03:12:29,120  INFO     Building customer similarity edges...
+2026-03-06 03:12:29,126  INFO       SIMILAR_TO edges created: 0
+2026-03-06 03:12:29,127  INFO       Embeddings complete
+2026-03-06 03:12:29,127  INFO       Step 4 OK: 12 carrier, 0 customer embeddings, 0 similarity edges
+2026-03-06 03:12:29,127  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 03:12:29,127  INFO       Step 5: Hybrid scoring demo
+2026-03-06 03:12:29,127  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 03:12:31,225  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 03:12:31,285  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `SIMILAR_TO` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=42, offset=42>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'SIMILAR_TO'}, '_severity': 'WARNING', '_position': {'offset': 42, 'line': 2, 'column': 42}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 03:12:31,286  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `INSURED_BY` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=27, offset=96>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'INSURED_BY'}, '_severity': 'WARNING', '_position': {'offset': 96, 'line': 3, 'column': 27}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 03:12:31,286  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `outcome` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=19, offset=139>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'outcome'}, '_severity': 'WARNING', '_position': {'offset': 139, 'line': 4, 'column': 19}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 03:12:34,821  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 03:12:36,757  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 03:12:38,706  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 03:12:38,707  INFO     
+  Rankings for [maria_bakery_tx]:
+2026-03-06 03:12:38,707  INFO         Hiscox                     52.4/100
+2026-03-06 03:12:38,707  INFO           → Hiscox specializes in small business food service operations like artisan bakeries and can bind your $2M general liabili
+2026-03-06 03:12:38,707  INFO         NEXT Insurance             51.3/100
+2026-03-06 03:12:38,707  INFO           → NEXT Insurance specializes in food service businesses and can bind your $2M general liability and product liability cove
+2026-03-06 03:12:38,707  INFO         Markel                     45.5/100
+2026-03-06 03:12:38,707  INFO           → While Markel maintains an A.M. Best rating and meets your $2M general and product liability coverage requirements for th
+2026-03-06 03:12:38,709  INFO     
+============================================================
+2026-03-06 03:12:38,709  INFO       Pipeline complete in 28.3s
+2026-03-06 03:12:38,709  INFO       Overall status: ok
+2026-03-06 03:12:38,709  INFO         neo4j_loader         → ok
+2026-03-06 03:12:38,709  INFO         seed_customers       → ok
+2026-03-06 03:12:38,710  INFO         cmdb_loader          → skipped
+2026-03-06 03:12:38,710  INFO         embeddings           → ok
+2026-03-06 03:12:38,710  INFO         scoring              → ok
+2026-03-06 03:12:38,710  INFO     ============================================================
+2026-03-06 03:12:38,710  INFO       Results saved → C:\Users\theya\Documents\GitHub\Plutus\KnowledgeGraph\logs\run_all_20260306_081238.json
+2026-03-06 09:59:28,019  INFO     ============================================================
+2026-03-06 09:59:28,019  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 09:59:28,019  INFO     Started: 2026-03-06 14:59:28 UTC
+2026-03-06 09:59:28,019  INFO     ============================================================
+2026-03-06 09:59:28,019  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 09:59:28,019  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 09:59:28,019  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 09:59:28,906  INFO     ============================================================
+2026-03-06 09:59:28,906  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 09:59:28,906  INFO     ============================================================
+2026-03-06 09:59:28,907  INFO     Loading Agent 1 data: kg_master_2026-03-06.json
+2026-03-06 09:59:28,928  INFO     Agent 1 data: 12 carriers | 177 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 09:59:30,975  INFO     Neo4j connected: bolt://localhost:7687 / db=neo4j
+2026-03-06 09:59:30,980  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (c:Carrier) REQUIRE c.id IS UNIQUE'
+2026-03-06 09:59:30,982  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (i:Industry) REQUIRE i.id IS UNIQUE'
+2026-03-06 09:59:30,983  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE` has no effect. `CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (s:State) REQUIRE s.code IS UNIQUE'
+2026-03-06 09:59:30,986  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (cu:Customer) REQUIRE cu.id IS UNIQUE'
+2026-03-06 09:59:30,989  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)` has no effect. `RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)', 'indexConstrPat': 'RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX carrier_name IF NOT EXISTS FOR (c:Carrier) ON (c.name)'
+2026-03-06 09:59:30,991  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)` has no effect. `RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)', 'indexConstrPat': 'RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX customer_industry IF NOT EXISTS FOR (cu:Customer) ON (cu.industry_id)'
+2026-03-06 09:59:30,991  INFO     Schema / indexes ready
+2026-03-06 09:59:30,991  INFO     Loading nodes...
+2026-03-06 09:59:31,149  INFO       Carriers: 12 upserted
+2026-03-06 09:59:31,209  INFO       Industries: 12 upserted
+2026-03-06 09:59:31,245  INFO       States: 6 upserted
+2026-03-06 09:59:31,245  INFO     Loading relationships...
+2026-03-06 09:59:31,968  INFO       SPECIALIZES_IN: 144 relationships
+2026-03-06 09:59:32,153  INFO       LICENSED_IN: 71 relationships
+2026-03-06 09:59:32,214  INFO       Pricing: updated 12 carriers
+2026-03-06 09:59:32,295  INFO       Reliability: updated 12 carriers
+2026-03-06 09:59:32,328  INFO     
+  Neo4j graph: 12 carriers | 12 industries | 6 states
+2026-03-06 09:59:32,328  INFO       Neo4j load complete
+2026-03-06 09:59:32,329  INFO       Step 1 OK: {'carriers': 12, 'industries': 12, 'states': 6}
+2026-03-06 09:59:32,329  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 09:59:32,329  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 09:59:32,329  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 09:59:32,331  INFO     ============================================================
+2026-03-06 09:59:32,331  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 09:59:32,331  INFO     Seeding 12 customers into Neo4j
+2026-03-06 09:59:32,331  INFO     ============================================================
+2026-03-06 09:59:34,444  INFO       + Maria's Artisan Bakery [maria_bakery_tx]
+2026-03-06 09:59:34,451  INFO       + Atlas Commercial Contractors [atlas_construction_oh]
+2026-03-06 09:59:34,458  INFO       + Precision Machining Solutions [precision_machining_in]
+2026-03-06 09:59:34,533  INFO       + CloudPeak Technology [cloudpeak_tech_ca]
+2026-03-06 09:59:34,540  INFO       + Sunstone Medical Group [sunstone_medical_fl]
+2026-03-06 09:59:34,551  INFO       + FastLane Logistics [fastlane_logistics_tx]
+2026-03-06 09:59:34,556  INFO       + Pinnacle Property Management [pinnacle_realty_ny]
+2026-03-06 09:59:34,561  INFO       + Vertex Strategy Consulting [vertex_consulting_ca]
+2026-03-06 09:59:34,564  INFO       + Coastal Home & Garden [coastal_retail_fl]
+2026-03-06 09:59:34,568  INFO       + Sparkle Commercial Cleaning [sparkle_clean_ca]
+2026-03-06 09:59:34,573  INFO       + GreenThumb Landscape Services [greenthumb_landscape_tx]
+2026-03-06 09:59:34,576  INFO       + Frontier Foods Manufacturing [frontier_foods_oh]
+2026-03-06 09:59:34,577  INFO     
+  Seeded: 12 customers, 0 failed
+2026-03-06 09:59:34,577  INFO       Step 2 OK: 12 customers seeded
+2026-03-06 09:59:34,577  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 09:59:34,577  INFO       Step 3: ServiceNow CMDB — SKIPPED (--skip-cmdb)
+2026-03-06 09:59:34,577  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 09:59:34,577  INFO       Step 4: Embeddings — SKIPPED (--skip-embed)
+2026-03-06 09:59:34,577  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 09:59:34,577  INFO       Step 5: Hybrid scoring demo
+2026-03-06 09:59:34,577  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 09:59:36,679  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 09:59:40,046  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 09:59:41,806  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 09:59:43,795  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 09:59:43,797  INFO     
+  Rankings for [maria_bakery_tx]:
+2026-03-06 09:59:43,797  INFO         NEXT Insurance             80.4/100
+2026-03-06 09:59:43,797  INFO           → NEXT Insurance specializes in food service and artisan food production businesses like yours, making them well-versed in
+2026-03-06 09:59:43,797  INFO         Nationwide                 75.2/100
+2026-03-06 09:59:43,797  INFO           → Nationwide has excellent expertise in food service and bakery operations, making them well-suited to understand the spec
+2026-03-06 09:59:43,798  INFO         Simply Business            65.1/100
+2026-03-06 09:59:43,798  INFO           → Simply Business specializes in food service businesses like your bakery and can provide the general liability and produc
+2026-03-06 09:59:43,799  INFO     
+============================================================
+2026-03-06 09:59:43,799  INFO       Pipeline complete in 15.8s
+2026-03-06 09:59:43,799  INFO       Overall status: ok
+2026-03-06 09:59:43,799  INFO         neo4j_loader         → ok
+2026-03-06 09:59:43,799  INFO         seed_customers       → ok
+2026-03-06 09:59:43,799  INFO         cmdb_loader          → skipped
+2026-03-06 09:59:43,800  INFO         embeddings           → skipped
+2026-03-06 09:59:43,800  INFO         scoring              → ok
+2026-03-06 09:59:43,800  INFO     ============================================================
+2026-03-06 09:59:43,801  INFO       Results saved → C:\Users\theya\Documents\GitHub\Plutus\KnowledgeGraph\logs\run_all_20260306_145943.json
+2026-03-06 10:05:59,657  INFO     ============================================================
+2026-03-06 10:05:59,657  INFO     BindIQ Agent 2 — Knowledge Graph Builder
+2026-03-06 10:05:59,658  INFO     Started: 2026-03-06 15:05:59 UTC
+2026-03-06 10:05:59,658  INFO     ============================================================
+2026-03-06 10:05:59,659  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 10:05:59,659  INFO       Step 1: Neo4j Loader — Agent 1 tables → graph
+2026-03-06 10:05:59,660  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 10:06:00,730  INFO     ============================================================
+2026-03-06 10:06:00,731  INFO     BindIQ Agent 2 — Neo4j Loader
+2026-03-06 10:06:00,731  INFO     ============================================================
+2026-03-06 10:06:00,731  INFO     Loading Agent 1 data: kg_master_2026-03-06.json
+2026-03-06 10:06:00,756  INFO     Agent 1 data: 12 carriers | 177 pricing rows | 12 reliability | 144 appetite | 72 state rows
+2026-03-06 10:06:02,819  INFO     Neo4j connected: bolt://localhost:7687 / db=neo4j
+2026-03-06 10:06:02,826  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT carrier_id FOR (e:Carrier) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT carrier_id IF NOT EXISTS FOR (c:Carrier) REQUIRE c.id IS UNIQUE'
+2026-03-06 10:06:02,833  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (e:Industry) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT industry_id FOR (e:Industry) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT industry_id IF NOT EXISTS FOR (i:Industry) REQUIRE i.id IS UNIQUE'
+2026-03-06 10:06:02,838  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE` has no effect. `CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (e:State) REQUIRE (e.code) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT state_code FOR (e:State) REQUIRE (e.code) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT state_code IF NOT EXISTS FOR (s:State) REQUIRE s.code IS UNIQUE'
+2026-03-06 10:06:02,844  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` has no effect. `CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (e:Customer) REQUIRE (e.id) IS UNIQUE', 'indexConstrPat': 'CONSTRAINT customer_id FOR (e:Customer) REQUIRE (e.id) IS UNIQUE'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (cu:Customer) REQUIRE cu.id IS UNIQUE'
+2026-03-06 10:06:02,852  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)` has no effect. `RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX carrier_name IF NOT EXISTS FOR (e:Carrier) ON (e.name)', 'indexConstrPat': 'RANGE INDEX carrier_name FOR (e:Carrier) ON (e.name)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX carrier_name IF NOT EXISTS FOR (c:Carrier) ON (c.name)'
+2026-03-06 10:06:02,854  INFO     Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description='note: successful completion - index or constraint already exists. `CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)` has no effect. `RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)` already exists.', position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_status_parameters': {'cmd': 'CREATE RANGE INDEX customer_industry IF NOT EXISTS FOR (e:Customer) ON (e.industry_id)', 'indexConstrPat': 'RANGE INDEX customer_industry FOR (e:Customer) ON (e.industry_id)'}, '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX customer_industry IF NOT EXISTS FOR (cu:Customer) ON (cu.industry_id)'
+2026-03-06 10:06:02,855  INFO     Schema / indexes ready
+2026-03-06 10:06:02,855  INFO     Loading nodes...
+2026-03-06 10:06:02,917  INFO       Carriers: 12 upserted
+2026-03-06 10:06:02,936  INFO       Industries: 12 upserted
+2026-03-06 10:06:02,973  INFO       States: 6 upserted
+2026-03-06 10:06:02,973  INFO     Loading relationships...
+2026-03-06 10:06:03,178  INFO       SPECIALIZES_IN: 144 relationships
+2026-03-06 10:06:03,313  INFO       LICENSED_IN: 71 relationships
+2026-03-06 10:06:03,334  INFO       Pricing: updated 12 carriers
+2026-03-06 10:06:03,354  INFO       Reliability: updated 12 carriers
+2026-03-06 10:06:03,357  INFO     
+  Neo4j graph: 12 carriers | 12 industries | 6 states
+2026-03-06 10:06:03,358  INFO       Neo4j load complete
+2026-03-06 10:06:03,362  INFO       Step 1 OK: {'carriers': 12, 'industries': 12, 'states': 6}
+2026-03-06 10:06:03,362  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 10:06:03,362  INFO       Step 2: Seed demo customers → Neo4j
+2026-03-06 10:06:03,362  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 10:06:03,364  INFO     ============================================================
+2026-03-06 10:06:03,364  INFO     BindIQ Agent 2 — Demo Customer Seed
+2026-03-06 10:06:03,365  INFO     Seeding 12 customers into Neo4j
+2026-03-06 10:06:03,365  INFO     ============================================================
+2026-03-06 10:06:05,434  INFO       + Maria's Artisan Bakery [maria_bakery_tx]
+2026-03-06 10:06:05,442  INFO       + Atlas Commercial Contractors [atlas_construction_oh]
+2026-03-06 10:06:05,456  INFO       + Precision Machining Solutions [precision_machining_in]
+2026-03-06 10:06:05,472  INFO       + CloudPeak Technology [cloudpeak_tech_ca]
+2026-03-06 10:06:05,479  INFO       + Sunstone Medical Group [sunstone_medical_fl]
+2026-03-06 10:06:05,486  INFO       + FastLane Logistics [fastlane_logistics_tx]
+2026-03-06 10:06:05,490  INFO       + Pinnacle Property Management [pinnacle_realty_ny]
+2026-03-06 10:06:05,501  INFO       + Vertex Strategy Consulting [vertex_consulting_ca]
+2026-03-06 10:06:05,505  INFO       + Coastal Home & Garden [coastal_retail_fl]
+2026-03-06 10:06:05,513  INFO       + Sparkle Commercial Cleaning [sparkle_clean_ca]
+2026-03-06 10:06:05,518  INFO       + GreenThumb Landscape Services [greenthumb_landscape_tx]
+2026-03-06 10:06:05,521  INFO       + Frontier Foods Manufacturing [frontier_foods_oh]
+2026-03-06 10:06:05,521  INFO     
+  Seeded: 12 customers, 0 failed
+2026-03-06 10:06:05,522  INFO       Step 2 OK: 12 customers seeded
+2026-03-06 10:06:05,522  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 10:06:05,522  INFO       Step 3: ServiceNow CMDB — SKIPPED (--skip-cmdb)
+2026-03-06 10:06:05,522  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 10:06:05,522  INFO       Step 4: Generate + store embeddings
+2026-03-06 10:06:05,522  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 10:06:05,524  INFO     ============================================================
+2026-03-06 10:06:05,524  INFO     BindIQ Agent 2 — Embeddings
+2026-03-06 10:06:05,524  INFO     ============================================================
+2026-03-06 10:06:05,524  INFO     Building carrier appetite embeddings...
+2026-03-06 10:06:15,109  INFO     Loading embedding model: all-MiniLM-L6-v2
+2026-03-06 10:06:15,111  INFO     Use pytorch device_name: cpu
+2026-03-06 10:06:15,111  INFO     Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-06 10:06:15,570  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:15,597  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:15,660  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:15,687  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:15,765  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:15,795  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:15,877  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:15,914  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-06 10:06:15,971  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:15,995  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:16,061  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:16,087  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:16,172  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-06 10:06:16,298  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:16,333  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:16,501  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:16,539  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:16,615  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:16,650  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:16,717  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-06 10:06:16,791  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-06 10:06:16,911  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 10:06:16,938  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-06 10:06:17,003  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-03-06 10:06:17,009  INFO       Model ready
+2026-03-06 10:06:17,340  INFO       Carrier embeddings stored: 12
+2026-03-06 10:06:17,341  INFO     Building customer description embeddings...
+2026-03-06 10:06:17,487  INFO       Customer embeddings stored: 6
+2026-03-06 10:06:17,488  INFO     Building customer similarity edges...
+2026-03-06 10:06:17,520  INFO       SIMILAR_TO edges created: 0
+2026-03-06 10:06:17,520  INFO       Embeddings complete
+2026-03-06 10:06:17,521  INFO       Step 4 OK: 12 carrier, 6 customer embeddings, 0 similarity edges
+2026-03-06 10:06:17,521  INFO     
+────────────────────────────────────────────────────────────
+2026-03-06 10:06:17,521  INFO       Step 5: Hybrid scoring demo
+2026-03-06 10:06:17,522  INFO     ────────────────────────────────────────────────────────────
+2026-03-06 10:06:19,578  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 10:06:21,830  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 10:06:23,584  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 10:06:25,355  INFO     HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-06 10:06:25,357  INFO     
+  Rankings for [maria_bakery_tx]:
+2026-03-06 10:06:25,357  INFO         NEXT Insurance             80.4/100
+2026-03-06 10:06:25,358  INFO           → NEXT Insurance specializes in food service businesses like yours and can bind your $2M general liability and product lia
+2026-03-06 10:06:25,358  INFO         Nationwide                 75.2/100
+2026-03-06 10:06:25,359  INFO           → Nationwide has deep expertise in food service and bakery operations, making them well-suited to underwrite the specific 
+2026-03-06 10:06:25,360  INFO         Simply Business            65.1/100
+2026-03-06 10:06:25,360  INFO           → Simply Business specializes in food service businesses like your bakery and can provide the $2M general liability and pr
+2026-03-06 10:06:25,361  INFO     
+============================================================
+2026-03-06 10:06:25,361  INFO       Pipeline complete in 25.7s
+2026-03-06 10:06:25,362  INFO       Overall status: ok
+2026-03-06 10:06:25,363  INFO         neo4j_loader         → ok
+2026-03-06 10:06:25,363  INFO         seed_customers       → ok
+2026-03-06 10:06:25,364  INFO         cmdb_loader          → skipped
+2026-03-06 10:06:25,364  INFO         embeddings           → ok
+2026-03-06 10:06:25,364  INFO         scoring              → ok
+2026-03-06 10:06:25,365  INFO     ============================================================
+2026-03-06 10:06:25,367  INFO       Results saved → C:\Users\theya\Documents\GitHub\Plutus\KnowledgeGraph\logs\run_all_20260306_150625.json

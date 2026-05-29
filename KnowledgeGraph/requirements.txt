@@ -1,0 +1,17 @@
+# BindIQ Agent 2 — Knowledge Graph Builder
+
+# Neo4j graph database driver
+neo4j>=5.14.0
+
+# Semantic embeddings (sentence-transformers + numpy for cosine similarity)
+sentence-transformers>=2.5.0
+numpy>=1.24.0
+
+# HTTP (ServiceNow REST API)
+requests>=2.31.0
+
+# LLM explanation layer (Claude Haiku — same key as Agent 1)
+anthropic>=0.40.0
+
+# Env vars
+python-dotenv>=1.0.0

@@ -1,0 +1,217 @@
+2026-03-06 03:10:40,987  INFO     ============================================================
+2026-03-06 03:10:40,987  INFO     BindIQ Agent 2 — Embeddings
+2026-03-06 03:10:40,987  INFO     ============================================================
+2026-03-06 03:10:40,988  INFO     Building carrier appetite embeddings...
+2026-03-06 03:10:51,388  INFO     Loading embedding model: all-MiniLM-L6-v2
+2026-03-06 03:10:51,390  INFO     Use pytorch device_name: cpu
+2026-03-06 03:10:51,390  INFO     Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-06 03:10:51,918  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:51,987  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:52,079  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:52,151  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:52,234  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:52,275  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:52,344  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:52,473  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-06 03:10:52,574  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:52,620  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:52,702  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:52,760  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:52,846  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-06 03:10:52,913  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:52,977  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:53,202  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:53,247  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:53,326  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:53,401  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:53,475  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-06 03:10:53,552  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-06 03:10:53,700  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:10:53,757  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-06 03:10:53,838  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-03-06 03:10:53,857  INFO       Model ready
+2026-03-06 03:10:54,974  INFO       Carrier embeddings stored: 12
+2026-03-06 03:10:54,974  INFO     Building customer description embeddings...
+2026-03-06 03:10:55,034  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `description_embedding` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=5, column=18, offset=122>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'description_embedding'}, '_severity': 'WARNING', '_position': {'offset': 122, 'line': 5, 'column': 18}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer)\n        WHERE cu.description IS NOT NULL\n          AND cu.description <> ''\n          AND cu.description_embedding IS NULL\n        RETURN cu.id AS cid, cu.description AS desc\n        "
+2026-03-06 03:10:55,244  INFO       Customer embeddings stored: 12
+2026-03-06 03:10:55,244  INFO     Building customer similarity edges...
+2026-03-06 03:10:55,292  INFO       SIMILAR_TO edges created: 0
+2026-03-06 03:10:55,293  INFO       Embeddings complete
+2026-03-06 03:11:07,906  INFO     ============================================================
+2026-03-06 03:11:07,906  INFO     BindIQ Agent 2 — Embeddings
+2026-03-06 03:11:07,906  INFO     ============================================================
+2026-03-06 03:11:07,906  INFO     Building carrier appetite embeddings...
+2026-03-06 03:11:17,883  INFO     Loading embedding model: all-MiniLM-L6-v2
+2026-03-06 03:11:17,884  INFO     Use pytorch device_name: cpu
+2026-03-06 03:11:17,884  INFO     Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-06 03:11:18,294  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:18,329  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:18,394  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:18,434  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:18,525  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:18,553  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:18,631  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:18,669  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-06 03:11:18,728  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:18,764  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:18,831  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:18,871  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:18,948  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-06 03:11:19,014  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:19,052  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:19,210  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:19,236  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:19,296  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:19,333  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:19,396  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-06 03:11:19,457  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-06 03:11:19,563  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 03:11:19,610  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-06 03:11:19,689  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-03-06 03:11:19,697  INFO       Model ready
+2026-03-06 03:11:20,212  INFO       Carrier embeddings stored: 12
+2026-03-06 03:11:20,212  INFO     Building customer description embeddings...
+2026-03-06 03:11:20,233  INFO       No new customer embeddings needed
+2026-03-06 03:11:20,233  INFO       Customer embeddings stored: 0
+2026-03-06 03:11:20,233  INFO     Building customer similarity edges...
+2026-03-06 03:11:20,241  INFO       SIMILAR_TO edges created: 0
+2026-03-06 03:11:20,241  INFO       Embeddings complete
+2026-03-06 03:11:47,158  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 03:11:47,207  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `SIMILAR_TO` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=42, offset=42>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'SIMILAR_TO'}, '_severity': 'WARNING', '_position': {'offset': 42, 'line': 2, 'column': 42}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 03:11:47,207  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `INSURED_BY` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=27, offset=96>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'INSURED_BY'}, '_severity': 'WARNING', '_position': {'offset': 96, 'line': 3, 'column': 27}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 03:11:47,208  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `outcome` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=19, offset=139>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'outcome'}, '_severity': 'WARNING', '_position': {'offset': 139, 'line': 4, 'column': 19}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 04:12:53,066  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 04:12:53,081  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `SIMILAR_TO` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=42, offset=42>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'SIMILAR_TO'}, '_severity': 'WARNING', '_position': {'offset': 42, 'line': 2, 'column': 42}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 04:12:53,081  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `INSURED_BY` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=27, offset=96>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'INSURED_BY'}, '_severity': 'WARNING', '_position': {'offset': 96, 'line': 3, 'column': 27}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 04:12:53,082  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `outcome` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=19, offset=139>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'outcome'}, '_severity': 'WARNING', '_position': {'offset': 139, 'line': 4, 'column': 19}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 04:34:09,970  INFO     ============================================================
+2026-03-06 04:34:09,974  INFO     BindIQ Agent 2 — ServiceNow CMDB Loader
+2026-03-06 04:34:09,974  INFO     ============================================================
+2026-03-06 04:34:10,413  INFO     ServiceNow connected: https://dev252187.service-now.com
+2026-03-06 04:34:10,418  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 04:34:10,440  INFO     Syncing 0 carriers to ServiceNow...
+2026-03-06 04:34:10,443  INFO     Syncing 12 customers to ServiceNow...
+2026-03-06 04:34:12,031  INFO       + Created customer: Maria's Artisan Bakery [maria_bakery_tx]
+2026-03-06 04:34:13,229  INFO       ~ Updated customer: Atlas Commercial Contractors
+2026-03-06 04:34:14,520  INFO       ~ Updated customer: Precision Machining Solutions
+2026-03-06 04:34:15,749  INFO       ~ Updated customer: CloudPeak Technology
+2026-03-06 04:34:16,969  INFO       ~ Updated customer: Sunstone Medical Group
+2026-03-06 04:34:18,069  INFO       ~ Updated customer: FastLane Logistics
+2026-03-06 04:34:19,331  INFO       ~ Updated customer: Pinnacle Property Management
+2026-03-06 04:34:20,472  INFO       ~ Updated customer: Vertex Strategy Consulting
+2026-03-06 04:34:21,550  INFO       ~ Updated customer: Coastal Home & Garden
+2026-03-06 04:34:22,681  INFO       ~ Updated customer: Sparkle Commercial Cleaning
+2026-03-06 04:34:23,787  INFO       ~ Updated customer: GreenThumb Landscape Services
+2026-03-06 04:34:24,870  INFO       ~ Updated customer: Frontier Foods Manufacturing
+2026-03-06 04:34:25,171  INFO     
+  ServiceNow CMDB sync complete
+2026-03-06 04:34:25,171  INFO       Carriers  — created: 0, updated: 0, failed: 0
+2026-03-06 04:34:25,172  INFO       Customers — created: 1, updated: 11, failed: 0
+2026-03-06 04:38:35,751  INFO     ============================================================
+2026-03-06 04:38:35,752  INFO     BindIQ Agent 2 — ServiceNow CMDB Loader
+2026-03-06 04:38:35,752  INFO     ============================================================
+2026-03-06 04:38:36,147  INFO     ServiceNow connected: https://dev252187.service-now.com
+2026-03-06 04:38:36,150  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 04:38:36,156  INFO     Syncing 0 carriers to ServiceNow...
+2026-03-06 04:38:36,156  INFO     Syncing 12 customers to ServiceNow...
+2026-03-06 04:38:36,976  INFO       ~ Updated customer: Maria's Artisan Bakery
+2026-03-06 04:38:38,062  INFO       ~ Updated customer: Atlas Commercial Contractors
+2026-03-06 04:38:39,193  INFO       ~ Updated customer: Precision Machining Solutions
+2026-03-06 04:38:40,366  INFO       ~ Updated customer: CloudPeak Technology
+2026-03-06 04:38:41,503  INFO       ~ Updated customer: Sunstone Medical Group
+2026-03-06 04:38:42,600  INFO       ~ Updated customer: FastLane Logistics
+2026-03-06 04:38:43,726  INFO       ~ Updated customer: Pinnacle Property Management
+2026-03-06 04:38:44,887  INFO       ~ Updated customer: Vertex Strategy Consulting
+2026-03-06 04:38:46,107  INFO       ~ Updated customer: Coastal Home & Garden
+2026-03-06 04:38:47,313  INFO       ~ Updated customer: Sparkle Commercial Cleaning
+2026-03-06 04:38:48,582  INFO       ~ Updated customer: GreenThumb Landscape Services
+2026-03-06 04:38:49,974  INFO       ~ Updated customer: Frontier Foods Manufacturing
+2026-03-06 04:38:50,275  INFO     
+  ServiceNow CMDB sync complete
+2026-03-06 04:38:50,276  INFO       Carriers  — created: 0, updated: 0, failed: 0
+2026-03-06 04:38:50,277  INFO       Customers — created: 0, updated: 12, failed: 0
+2026-03-06 04:40:16,479  INFO     ============================================================
+2026-03-06 04:40:16,484  INFO     BindIQ Agent 2 — ServiceNow CMDB Loader
+2026-03-06 04:40:16,490  INFO     ============================================================
+2026-03-06 04:40:18,113  INFO     ServiceNow connected: https://dev252187.service-now.com
+2026-03-06 04:40:18,116  INFO     Loading Agent 1 data: kg_master_2026-03-05.json
+2026-03-06 04:40:18,118  INFO     Syncing 12 carriers to ServiceNow...
+2026-03-06 04:40:19,480  INFO       + Created carrier: hartford
+2026-03-06 04:40:21,034  INFO       ~ Updated carrier: progressive
+2026-03-06 04:40:23,260  INFO       ~ Updated carrier: next
+2026-03-06 04:40:24,513  INFO       ~ Updated carrier: travelers
+2026-03-06 04:40:25,679  INFO       ~ Updated carrier: chubb
+2026-03-06 04:40:26,860  INFO       ~ Updated carrier: nationwide
+2026-03-06 04:40:28,047  INFO       ~ Updated carrier: hiscox
+2026-03-06 04:40:29,338  INFO       ~ Updated carrier: markel
+2026-03-06 04:40:30,472  INFO       ~ Updated carrier: simply_business
+2026-03-06 04:40:31,659  INFO       ~ Updated carrier: liberty_mutual
+2026-03-06 04:40:32,864  INFO       ~ Updated carrier: zurich
+2026-03-06 04:40:34,119  INFO       ~ Updated carrier: cna
+2026-03-06 04:40:34,419  INFO     Syncing 12 customers to ServiceNow...
+2026-03-06 04:40:35,386  INFO       ~ Updated customer: Maria's Artisan Bakery
+2026-03-06 04:40:36,527  INFO       ~ Updated customer: Atlas Commercial Contractors
+2026-03-06 04:40:37,642  INFO       ~ Updated customer: Precision Machining Solutions
+2026-03-06 04:40:38,778  INFO       ~ Updated customer: CloudPeak Technology
+2026-03-06 04:40:39,959  INFO       ~ Updated customer: Sunstone Medical Group
+2026-03-06 04:40:41,129  INFO       ~ Updated customer: FastLane Logistics
+2026-03-06 04:40:42,315  INFO       ~ Updated customer: Pinnacle Property Management
+2026-03-06 04:40:43,554  INFO       ~ Updated customer: Vertex Strategy Consulting
+2026-03-06 04:40:44,753  INFO       ~ Updated customer: Coastal Home & Garden
+2026-03-06 04:40:46,659  INFO       ~ Updated customer: Sparkle Commercial Cleaning
+2026-03-06 04:40:48,047  INFO       ~ Updated customer: GreenThumb Landscape Services
+2026-03-06 04:40:49,376  INFO       ~ Updated customer: Frontier Foods Manufacturing
+2026-03-06 04:40:49,677  INFO     
+  ServiceNow CMDB sync complete
+2026-03-06 04:40:49,678  INFO       Carriers  — created: 1, updated: 11, failed: 0
+2026-03-06 04:40:49,678  INFO       Customers — created: 0, updated: 12, failed: 0
+2026-03-06 04:41:17,892  INFO     Email sent to bindiq.demo@gmail.com: Action Needed: Whole Foods Requires Higher Insurance (8 days to comply)
+2026-03-06 05:15:11,992  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 05:15:12,040  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `SIMILAR_TO` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=42, offset=42>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'SIMILAR_TO'}, '_severity': 'WARNING', '_position': {'offset': 42, 'line': 2, 'column': 42}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 05:15:12,046  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `INSURED_BY` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=27, offset=96>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'INSURED_BY'}, '_severity': 'WARNING', '_position': {'offset': 96, 'line': 3, 'column': 27}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 05:15:12,052  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `outcome` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=19, offset=139>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'outcome'}, '_severity': 'WARNING', '_position': {'offset': 139, 'line': 4, 'column': 19}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 05:15:14,215  INFO     Email sent to bindiq.demo@gmail.com: Action Needed: Whole Foods Requires Higher Insurance (8 days to comply)
+2026-03-06 05:21:38,127  INFO     Scoring carriers for: Maria's Artisan Bakery [food_service / TX]
+2026-03-06 05:21:38,351  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `SIMILAR_TO` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=2, column=42, offset=42>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'SIMILAR_TO'}, '_severity': 'WARNING', '_position': {'offset': 42, 'line': 2, 'column': 42}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 05:21:38,369  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N51', status_description='warn: unknown relationship type. The relationship type `INSURED_BY` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=3, column=27, offset=96>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'reltype': 'INSURED_BY'}, '_severity': 'WARNING', '_position': {'offset': 96, 'line': 3, 'column': 27}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 05:21:38,371  WARNING  Received notification from DBMS server: <GqlStatusObject gql_status='01N52', status_description='warn: unknown property key. The property `outcome` does not exist. Verify that the spelling is correct.', position=<SummaryInputPosition line=4, column=19, offset=139>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'UNRECOGNIZED', '_status_parameters': {'propkey': 'outcome'}, '_severity': 'WARNING', '_position': {'offset': 139, 'line': 4, 'column': 19}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "\n        MATCH (cu:Customer {id: $cid})-[:SIMILAR_TO]-(peer:Customer)\n        MATCH (peer)-[ins:INSURED_BY]->(c:Carrier)\n        WHERE ins.outcome IN ['good', 'excellent']\n        RETURN c.id AS cid, count(ins) AS success_count\n        "
+2026-03-06 05:21:40,605  INFO     Email sent to bindiq.demo@gmail.com: Action Needed: Whole Foods Requires Higher Insurance (8 days to comply)
+2026-03-06 09:13:07,370  INFO     ============================================================
+2026-03-06 09:13:07,371  INFO     BindIQ Agent 2 — Embeddings
+2026-03-06 09:13:07,371  INFO     ============================================================
+2026-03-06 09:13:07,371  INFO     Building carrier appetite embeddings...
+2026-03-06 09:13:17,021  INFO     Loading embedding model: all-MiniLM-L6-v2
+2026-03-06 09:13:17,021  INFO     Use pytorch device_name: cpu
+2026-03-06 09:13:17,022  INFO     Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-03-06 09:13:17,451  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:17,487  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:17,546  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:17,586  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:17,652  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:17,687  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:17,763  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:17,796  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-03-06 09:13:17,869  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:17,903  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:17,958  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:17,997  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:18,057  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-03-06 09:13:18,133  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:18,162  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:18,332  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:18,364  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:18,428  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:18,462  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:18,534  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-06 09:13:18,597  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-06 09:13:18,730  INFO     HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-06 09:13:18,760  INFO     HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-06 09:13:18,825  INFO     HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-03-06 09:13:18,830  INFO       Model ready
+2026-03-06 09:13:19,308  INFO       Carrier embeddings stored: 12
+2026-03-06 09:13:19,309  INFO     Building customer description embeddings...
+2026-03-06 09:13:19,310  INFO       No new customer embeddings needed
+2026-03-06 09:13:19,311  INFO       Customer embeddings stored: 0
+2026-03-06 09:13:19,311  INFO     Building customer similarity edges...
+2026-03-06 09:13:19,317  INFO       SIMILAR_TO edges created: 0
+2026-03-06 09:13:19,317  INFO       Embeddings complete

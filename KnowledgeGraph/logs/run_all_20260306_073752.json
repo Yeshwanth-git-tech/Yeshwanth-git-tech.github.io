@@ -1,0 +1,24 @@
+{
+  "steps": {
+    "neo4j_loader": {
+      "status": "error",
+      "reason": "{neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}"
+    },
+    "seed_customers": {
+      "status": "ok",
+      "loaded": 0,
+      "failed": 12
+    },
+    "cmdb_loader": {
+      "status": "skipped"
+    },
+    "embeddings": {
+      "status": "skipped"
+    },
+    "scoring": {
+      "status": "error",
+      "reason": "No module named 'numpy'"
+    }
+  },
+  "status": "partial"
+}
