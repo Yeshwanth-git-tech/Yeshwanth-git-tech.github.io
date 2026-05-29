@@ -1,6 +1,3 @@
-cd ~/Documents/BindIQ/Yeshwanth-git-tech.github.io
-
-cat > README.md << 'EOF'
 # BindIQ — 6-Agent Insurance Automation
 
 Live demo: https://yeshwanth-git-tech.github.io
