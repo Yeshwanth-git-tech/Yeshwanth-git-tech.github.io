@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BindIQ — AI Insurance Automation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #08090a;
+  --surface: #0f1012;
+  --surface2: #161719;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #f0ede8;
+  --muted: #6b6966;
+  --accent: #c8f564;
+  --accent2: #7ef5c0;
+  --accent3: #f5c864;
+  --red: #f56464;
+  --blue: #64b5f5;
+  --r: 10px;
+  --r2: 16px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* --- NOISE TEXTURE --- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* --- NAV --- */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  background: rgba(8,9,10,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  padding: 4px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+/* --- HERO --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 48px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-glow {
+  position: absolute;
+  top: -200px; left: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(200,245,100,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-glow2 {
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(126,245,192,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 32px; height: 1px;
+  background: var(--accent);
+}
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(52px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  max-width: 900px;
+  margin-bottom: 32px;
+}
+.hero-title .line2 { color: var(--accent); }
+.hero-title .line3 { color: var(--muted); font-weight: 400; font-size: 0.65em; display: block; margin-top: 12px; letter-spacing: -0.01em; }
+.hero-sub {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+.hero-actions { display: flex; gap: 16px; align-items: center; }
+.btn-primary {
+  background: var(--accent);
+  color: #0a0b0c;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border: none;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,245,100,0.25); }
+.btn-ghost {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--text); }
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+.stat-item {}
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+.stat-num span { color: var(--accent); }
+.stat-label { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; margin-top: 2px; }
+
+/* --- SECTION --- */
+section { padding: 100px 48px; position: relative; }
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.section-sub { color: var(--muted); max-width: 480px; font-size: 15px; line-height: 1.7; margin-bottom: 56px; }
+
+/* --- PIPELINE SECTION --- */
+#pipeline-section { background: var(--surface); }
+.pipeline-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.claim-pill {
+  padding: 8px 20px;
+  border-radius: 40px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.claim-pill:hover { border-color: var(--accent); color: var(--accent); }
+.claim-pill.active { background: var(--accent); color: #0a0b0c; border-color: var(--accent); font-weight: 500; }
+.run-btn-main {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.run-btn-main:hover { background: var(--accent); color: #0a0b0c; }
+.run-btn-main:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* --- AGENT GRID --- */
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.agent-cell {
+  background: var(--surface);
+  padding: 28px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+  overflow: hidden;
+}
+.agent-cell:hover { background: var(--surface2); }
+.agent-cell.active { background: rgba(200,245,100,0.04); }
+.agent-cell.done { background: rgba(126,245,192,0.03); }
+.agent-cell.error { background: rgba(245,100,100,0.04); }
+
+.agent-cell::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.3s;
+}
+.agent-cell.active::after { background: var(--accent); animation: loading-bar 1.8s ease-in-out infinite; }
+.agent-cell.done::after { background: var(--accent2); }
+.agent-cell.error::after { background: var(--red); }
+
+@keyframes loading-bar {
+  0% { transform: scaleX(0); transform-origin: left; }
+  50% { transform: scaleX(0.7); transform-origin: left; }
+  100% { transform: scaleX(1); transform-origin: left; }
+}
+
+.agent-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.agent-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; }
+.agent-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+.status-indicator {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border2);
+  margin-top: 4px;
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+.active .status-indicator { background: var(--accent); animation: pulse-dot 1s infinite; }
+.done .status-indicator { background: var(--accent2); }
+.error .status-indicator { background: var(--red); }
+@keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.agent-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.agent-output {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  min-height: 48px;
+  line-height: 1.6;
+  transition: opacity 0.3s;
+}
+.agent-output .key { color: var(--muted); }
+.agent-output .val { color: var(--text); }
+.agent-output .val.ok { color: var(--accent2); }
+.agent-output .val.warn { color: var(--accent3); }
+.agent-output .val.err { color: var(--red); }
+.agent-output .val.accent { color: var(--accent); }
+
+/* --- LOG TERMINAL --- */
+.terminal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+}
+.terminal-header {
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.term-dot { width: 10px; height: 10px; border-radius: 50%; }
+.term-dot.r { background: #ff5f57; }
+.term-dot.y { background: #febc2e; }
+.term-dot.g { background: #28c840; }
+.terminal-title { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-left: 8px; }
+.terminal-body {
+  padding: 20px;
+  min-height: 160px;
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.log-entry { display: flex; gap: 12px; }
+.log-ts { color: var(--muted); flex-shrink: 0; }
+.log-msg { color: #a0c878; }
+.log-msg.info { color: var(--blue); }
+.log-msg.warn { color: var(--accent3); }
+.log-msg.err { color: var(--red); }
+.log-msg.success { color: var(--accent2); }
+.cursor::after { content: '█'; animation: blink 1s step-end infinite; color: var(--accent); }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* --- OUTCOME BANNER --- */
+.outcome-banner {
+  display: none;
+  margin-top: 20px;
+  padding: 20px 28px;
+  border-radius: var(--r2);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.outcome-banner.show { display: flex; }
+.outcome-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+.chip.green { background: rgba(126,245,192,0.1); color: var(--accent2); border: 1px solid rgba(126,245,192,0.2); }
+.chip.yellow { background: rgba(245,200,100,0.1); color: var(--accent3); border: 1px solid rgba(245,200,100,0.2); }
+.chip.lime { background: rgba(200,245,100,0.1); color: var(--accent); border: 1px solid rgba(200,245,100,0.2); }
+.outcome-time {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.outcome-time small { font-size: 11px; font-family: 'DM Mono', monospace; font-weight: 400; color: var(--muted); display: block; }
+
+/* --- FEATURES --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.feature-card {
+  background: var(--surface);
+  padding: 36px;
+}
+.feature-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.feature-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.feature-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.feature-tag {
+  margin-top: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- STACK SECTION --- */
+.stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.stack-tag {
+  padding: 8px 18px;
+  border: 1px solid var(--border2);
+  border-radius: 40px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  transition: all 0.2s;
+}
+.stack-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+/* --- AWARD STRIP --- */
+.award-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 48px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(200,245,100,0.02);
+}
+.award-icon { font-size: 32px; }
+.award-text {}
+.award-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.award-value { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; color: var(--accent); letter-spacing: -0.02em; }
+.award-divider { width: 1px; height: 48px; background: var(--border2); }
+
+/* --- FOOTER --- */
+footer {
+  padding: 48px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; }
+.footer-brand span { color: var(--accent); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
+
+/* --- ANIMATIONS --- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.6s ease forwards; opacity: 0; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .hero { padding: 100px 24px 60px; }
+  section { padding: 72px 24px; }
+  .agent-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .award-strip { padding: 20px 24px; flex-wrap: wrap; }
+  footer { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Bind<span>IQ</span></div>
+  <div class="nav-links">
+    <a href="#pipeline-section">Pipeline</a>
+    <a href="#features">Features</a>
+    <a href="#stack">Stack</a>
+    <a href="https://github.com/theyaneshj17/Project_Insurance" target="_blank" rel="noopener" class="nav-badge">GitHub ↗</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <div class="hero-eyebrow fade-up">6-Agent Insurance Automation</div>
+  <h1 class="hero-title fade-up delay-1">
+    Broker workflows,<br/>
+    <span class="line2">automated.</span>
+    <span class="line3">From 5–7 days to 48 hours.</span>
+  </h1>
+  <p class="hero-sub fade-up delay-2">
+    BindIQ is a <strong>multi-agent LangGraph system</strong> that automates commercial insurance binding — intake parsing, risk scoring, carrier portal navigation, denial detection, quote generation, and bind orchestration.
+  </p>
+  <div class="hero-actions fade-up delay-3">
+    <a href="#pipeline-section" class="btn-primary">See it in action</a>
+    <a href="https://github.com/theyaneshj17/Project_Insurance" target="_blank" rel="noopener" class="btn-ghost">View on GitHub →</a>
+  </div>
+
+  <div class="hero-stats fade-up delay-4">
+    <div class="stat-item">
+      <div class="stat-num">48<span>h</span></div>
+      <div class="stat-label">// Turnaround time</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">6<span>x</span></div>
+      <div class="stat-label">// Parallel agents</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3<span>rd</span></div>
+      <div class="stat-label">// IU Kelley Plutus</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">0<span>%</span></div>
+      <div class="stat-label">// Manual data entry</div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARD STRIP -->
+<div class="award-strip">
+  <div class="award-icon">🏆</div>
+  <div class="award-text">
+    <div class="award-label">Competition</div>
+    <div class="award-value">3rd Place — IU Kelley Plutus Agentic AI Competition</div>
+  </div>
+  <div class="award-divider"></div>
+  <div class="award-text">
+    <div class="award-label">Architecture</div>
+    <div class="award-value">LangGraph · Neo4j · Playwright</div>
+  </div>
+  <div class="award-divider"></div>
+  <div class="award-text">
+    <div class="award-label">Domain</div>
+    <div class="award-value">Commercial Insurance RCM</div>
+  </div>
+</div>
+
+<!-- PIPELINE DEMO -->
+<section id="pipeline-section">
+  <div class="section-label">Live demo</div>
+  <h2 class="section-title">6-agent pipeline</h2>
+  <p class="section-sub">Select a dummy claim and watch each agent process it in real time.</p>
+
+  <div class="pipeline-controls">
+    <button class="claim-pill active" data-idx="0" onclick="selectClaim(0, this)">EMS-4821 · NEXT Insurance</button>
+    <button class="claim-pill" data-idx="1" onclick="selectClaim(1, this)">EMS-7703 · Chubb</button>
+    <button class="claim-pill" data-idx="2" onclick="selectClaim(2, this)">EMS-2214 · Simply Business</button>
+    <button class="run-btn-main" id="runBtn" onclick="runPipeline()">▶ Run Pipeline</button>
+  </div>
+
+  <div class="agent-grid" id="agentGrid"></div>
+
+  <div class="terminal">
+    <div class="terminal-header">
+      <div class="term-dot r"></div>
+      <div class="term-dot y"></div>
+      <div class="term-dot g"></div>
+      <div class="terminal-title">bindiq — agent log stream</div>
+    </div>
+    <div class="terminal-body" id="logBody">
+      <div class="log-entry"><span class="log-ts">00:00:00</span><span class="log-msg info">BindIQ ready. Select a claim and run the pipeline.</span></div>
+    </div>
+  </div>
+
+  <div class="outcome-banner" id="outcomeBanner">
+    <div class="outcome-chips" id="outcomeChips"></div>
+    <div class="outcome-time" id="outcomeTime"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" style="background: var(--surface);">
+  <div class="section-label">Architecture</div>
+  <h2 class="section-title">How it works</h2>
+  <p class="section-sub">Six specialized agents operate in a directed graph, each with a discrete responsibility.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">📥</div>
+      <div class="feature-name">Intake Parser</div>
+      <div class="feature-desc">Extracts structured entities from unstructured broker submissions using Claude's extraction pipeline. Identifies carrier, policy type, coverage requirements, and applicant metadata.</div>
+      <div class="feature-tag">Agent 01 · LLM extraction</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔬</div>
+      <div class="feature-name">Risk Classifier</div>
+      <div class="feature-desc">Traverses the Neo4j knowledge graph to score applicant risk. Correlates business type, claims history, and carrier appetite across 380+ relationship edges.</div>
+      <div class="feature-tag">Agent 02 · Neo4j traversal</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌐</div>
+      <div class="feature-name">Portal Navigator</div>
+      <div class="feature-desc">Playwright-based browser agent authenticates into live carrier portals — NEXT, Chubb, Simply Business — and retrieves real-time policy and eligibility data.</div>
+      <div class="feature-tag">Agent 03 · Playwright automation</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🚨</div>
+      <div class="feature-name">Denial Detector</div>
+      <div class="feature-desc">Scans retrieved carrier data against 28 payer rules to flag denial codes, missing documents, and billing order violations before submission.</div>
+      <div class="feature-tag">Agent 04 · Rule engine</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📋</div>
+      <div class="feature-name">Quote Generator</div>
+      <div class="feature-desc">Assembles a payer-ready ACORD 125/126 quote package with premium breakdown, coverage terms, and validity window. Formatted for direct carrier submission.</div>
+      <div class="feature-tag">Agent 05 · ACORD formatting</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✅</div>
+      <div class="feature-name">Bind Orchestrator</div>
+      <div class="feature-desc">Submits the final bind request, captures reference numbers, updates the broker workflow state, and triggers notifications. The human reviews; the agent handles the rest.</div>
+      <div class="feature-tag">Agent 06 · LangGraph orchestration</div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack">
+  <div class="section-label">Tech stack</div>
+  <h2 class="section-title">Built with</h2>
+  <p class="section-sub">Production-grade tooling for agentic AI workflows.</p>
+  <div class="stack-grid">
+    <span class="stack-tag">LangGraph</span>
+    <span class="stack-tag">Claude (Anthropic)</span>
+    <span class="stack-tag">Neo4j</span>
+    <span class="stack-tag">Playwright</span>
+    <span class="stack-tag">Python 3.11</span>
+    <span class="stack-tag">FastAPI</span>
+    <span class="stack-tag">LangChain</span>
+    <span class="stack-tag">Pydantic</span>
+    <span class="stack-tag">ACORD XML</span>
+    <span class="stack-tag">ChromaDB</span>
+    <span class="stack-tag">Docker</span>
+    <span class="stack-tag">GitHub Actions</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Bind<span>IQ</span></div>
+  <div class="footer-links">
+    <a href="https://github.com/theyaneshj17/Project_Insurance" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/yeshwanthsatheesh" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:yeshwanthsatheesh91@gmail.com">Contact</a>
+  </div>
+  <div class="footer-copy">Yeshwanth Satheesh · MS Data Science, IU Bloomington</div>
+</footer>
+
+<script>
+const CLAIMS = [
+  {
+    id:'EMS-4821', carrier:'NEXT Insurance', type:'Commercial Auto',
+    premium:'$2,840/yr', broker:'Sarah K.', risk:'Low', riskCls:'ok',
+    coverage:'$1M liability', portal:'next-insurance.com',
+    denial:null, denialCls:'ok',
+    ref: 'BND-EMS4821', time: '42 min'
+  },
+  {
+    id:'EMS-7703', carrier:'Chubb', type:'General Liability',
+    premium:'$6,200/yr', broker:'David R.', risk:'Medium', riskCls:'warn',
+    coverage:'$2M liability', portal:'chubb.com',
+    denial:'Missing COI doc', denialCls:'err',
+    ref: null, time: '—'
+  },
+  {
+    id:'EMS-2214', carrier:'Simply Business', type:'BOP Policy',
+    premium:'$1,450/yr', broker:'Mei L.', risk:'Low', riskCls:'ok',
+    coverage:'$500K property', portal:'simplybusiness.com',
+    denial:null, denialCls:'ok',
+    ref: 'BND-EMS2214', time: '38 min'
+  }
+];
+
+const AGENTS = [
+  {
+    id:'intake', num:'AGENT 01', name:'Intake Parser',
+    desc:'Extracts structured data from broker submission',
+    output: (c) => [
+      ['claim_id', c.id, 'accent'],
+      ['carrier', c.carrier, ''],
+      ['policy_type', c.type, ''],
+      ['broker', c.broker, ''],
+    ],
+    logs: (c) => [
+      { t:'info', msg:`Parsing submission for claim ${c.id}` },
+      { t:'', msg:`Carrier: ${c.carrier} · Type: ${c.type}` },
+      { t:'success', msg:`Intake extracted — 4 entities identified` },
+    ]
+  },
+  {
+    id:'risk', num:'AGENT 02', name:'Risk Classifier',
+    desc:'Scores risk via Neo4j knowledge graph traversal',
+    output: (c) => [
+      ['risk_score', c.risk, c.riskCls],
+      ['graph_nodes', '142', ''],
+      ['relationships', '389 edges', ''],
+      ['confidence', '94.2%', 'ok'],
+    ],
+    logs: (c) => [
+      { t:'info', msg:`Querying Neo4j for applicant profile` },
+      { t:'', msg:`Traversed 142 nodes, 389 edges` },
+      { t: c.risk==='Low' ? 'success' : 'warn', msg:`Risk classified: ${c.risk}` },
+    ]
+  },
+  {
+    id:'portal', num:'AGENT 03', name:'Portal Navigator',
+    desc:'Playwright agent authenticates into carrier portal',
+    output: (c) => [
+      ['portal', c.portal, ''],
+      ['auth', 'OAuth 2.0', ''],
+      ['session', 'Active', 'ok'],
+      ['screens_read', '4', ''],
+    ],
+    logs: (c) => [
+      { t:'info', msg:`Launching browser agent → ${c.portal}` },
+      { t:'', msg:`Authenticated, navigating policy portal` },
+      { t:'success', msg:`Portal data retrieved — 4 screens parsed` },
+    ]
+  },
+  {
+    id:'denial', num:'AGENT 04', name:'Denial Detector',
+    desc:'Checks 28 payer rules for denial flags',
+    output: (c) => [
+      ['denial_flag', c.denial || 'None', c.denialCls],
+      ['rules_checked', '28', ''],
+      ['missing_docs', c.denial ? '1 document' : 'None', c.denial ? 'err' : 'ok'],
+      ['action', c.denial ? 'Escalate' : 'Proceed', c.denial ? 'warn' : 'ok'],
+    ],
+    logs: (c) => c.denial
+      ? [
+          { t:'warn', msg:`Denial flag: "${c.denial}"` },
+          { t:'warn', msg:`Escalating to remediation queue` },
+        ]
+      : [
+          { t:'', msg:`Checked 28 payer rules — no violations` },
+          { t:'success', msg:`Claim cleared for quoting` },
+        ]
+  },
+  {
+    id:'quote', num:'AGENT 05', name:'Quote Generator',
+    desc:'Generates ACORD-formatted quote package',
+    output: (c) => [
+      ['annual_premium', c.premium, 'accent'],
+      ['format', 'ACORD 125/126', ''],
+      ['validity', '30 days', ''],
+      ['status', 'Ready to bind', 'ok'],
+    ],
+    logs: (c) => [
+      { t:'info', msg:`Generating quote package` },
+      { t:'', msg:`Premium: ${c.premium} · Coverage: ${c.coverage}` },
+      { t:'success', msg:`ACORD quote generated — ready for submission` },
+    ]
+  },
+  {
+    id:'bind', num:'AGENT 06', name:'Bind Orchestrator',
+    desc:'Submits bind request, captures reference number',
+    output: (c) => [
+      ['bind_status', c.denial ? 'Pending review' : 'Submitted', c.denial ? 'warn' : 'ok'],
+      ['reference', c.ref || '—', c.ref ? 'accent' : ''],
+      ['turnaround', c.time, c.denial ? '' : 'accent'],
+      ['broker_notified', c.denial ? 'No' : 'Yes', c.denial ? 'warn' : 'ok'],
+    ],
+    logs: (c) => c.denial
+      ? [
+          { t:'warn', msg:`Bind paused — denial remediation required` },
+          { t:'warn', msg:`Broker alerted, manual review queued` },
+        ]
+      : [
+          { t:'info', msg:`Submitting bind request to ${c.carrier}` },
+          { t:'success', msg:`Policy bound — ref ${c.ref}` },
+          { t:'success', msg:`Broker notified · Turnaround: ${c.time}` },
+        ]
+  },
+];
+
+let selectedClaim = 0;
+let running = false;
+let timers = [];
+let done = [];
+let active = null;
+
+function selectClaim(idx, el) {
+  if (running) return;
+  selectedClaim = idx;
+  document.querySelectorAll('.claim-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  resetPipeline();
+}
+
+function resetPipeline() {
+  timers.forEach(clearTimeout);
+  timers = [];
+  running = false;
+  done = [];
+  active = null;
+  document.getElementById('outcomeBanner').classList.remove('show');
+  document.getElementById('logBody').innerHTML = '<div class="log-entry"><span class="log-ts">00:00:00</span><span class="log-msg info">BindIQ ready. Select a claim and run the pipeline.</span></div>';
+  document.getElementById('runBtn').disabled = false;
+  renderGrid();
+}
+
+function renderGrid() {
+  const c = CLAIMS[selectedClaim];
+  const grid = document.getElementById('agentGrid');
+  grid.innerHTML = '';
+  AGENTS.forEach(ag => {
+    const isActive = ag.id === active;
+    const isDone = done.includes(ag.id);
+    const cls = isActive ? 'active' : isDone ? 'done' : '';
+    const fields = ag.output(c);
+    const outputHtml = isDone || isActive
+      ? fields.map(([k,v,c]) => `<div><span class="key">${k}: </span><span class="val ${c}">${v}</span></div>`).join('')
+      : `<div style="color:var(--muted);font-size:11px">— waiting —</div>`;
+
+    const cell = document.createElement('div');
+    cell.className = `agent-cell ${cls}`;
+    cell.innerHTML = `
+      <div class="agent-num">${ag.num}</div>
+      <div class="agent-header">
+        <div class="agent-name">${ag.name}</div>
+        <div class="status-indicator"></div>
+      </div>
+      <div class="agent-desc">${ag.desc}</div>
+      <div class="agent-output">${outputHtml}</div>
+    `;
+    grid.appendChild(cell);
+  });
+}
+
+function addLog(type, msg) {
+  const body = document.getElementById('logBody');
+  const now = new Date();
+  const t = now.toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  body.innerHTML += `<div class="log-entry"><span class="log-ts">${t}</span><span class="log-msg ${type}">${msg}</span></div>`;
+  body.scrollTop = body.scrollHeight;
+}
+
+function runPipeline() {
+  if (running) return;
+  running = true;
+  done = [];
+  active = null;
+  document.getElementById('runBtn').disabled = true;
+  document.getElementById('outcomeBanner').classList.remove('show');
+  document.getElementById('logBody').innerHTML = '';
+  const c = CLAIMS[selectedClaim];
+  addLog('info', `Starting pipeline for claim ${c.id} — ${c.carrier}`);
+  renderGrid();
+
+  let delay = 400;
+  AGENTS.forEach((ag, i) => {
+    // Activate
+    const t1 = setTimeout(() => {
+      active = ag.id;
+      renderGrid();
+      ag.logs(c).forEach((l, j) => {
+        const tl = setTimeout(() => addLog(l.t, l.msg), j * 280);
+        timers.push(tl);
+      });
+    }, delay);
+    timers.push(t1);
+    delay += 1200;
+
+    // Complete
+    const t2 = setTimeout(() => {
+      done.push(ag.id);
+      active = i < AGENTS.length - 1 ? null : null;
+      renderGrid();
+      if (i === AGENTS.length - 1) {
+        running = false;
+        showOutcome(c);
+        document.getElementById('runBtn').disabled = false;
+        document.getElementById('runBtn').textContent = '↺ Run Again';
+      }
+    }, delay - 200);
+    timers.push(t2);
+  });
+}
+
+function showOutcome(c) {
+  const banner = document.getElementById('outcomeBanner');
+  const chips = document.getElementById('outcomeChips');
+  const time = document.getElementById('outcomeTime');
+  banner.classList.add('show');
+  if (c.denial) {
+    chips.innerHTML = `
+      <span class="chip yellow">Denial detected</span>
+      <span class="chip yellow">Remediation queued</span>
+      <span class="chip lime">Quote generated</span>
+    `;
+    time.innerHTML = `Paused<small>// manual review</small>`;
+  } else {
+    chips.innerHTML = `
+      <span class="chip green">Policy bound ✓</span>
+      <span class="chip lime">Ref: ${c.ref}</span>
+      <span class="chip lime">Broker notified</span>
+    `;
+    time.innerHTML = `${c.time}<small>// total turnaround</small>`;
+  }
+}
+
+renderGrid();
+</script>
+</body>
+</html>
